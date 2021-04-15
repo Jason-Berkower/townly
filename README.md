@@ -12,9 +12,7 @@ The aim of this application is to connect users with tour guides and facilitate 
 
 ## Graphs and Diagrams
 
-#### Our Data Flow
-
-![Our Data Flow]()
+[Our Data Flow](https://whimsical.com/data-flow-ahynzxWJu6WHKXXhT18NN)
 
 #### Our Component Hierarchy:
 
