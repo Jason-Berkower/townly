@@ -14,7 +14,7 @@ The aim of this application is to connect users with tour guides and facilitate 
 
 [Our Data Flow]()
 
-[Our Component Hierarchy]()
+![Our Component Hierarchy](https://res.cloudinary.com/mandatea/image/upload/v1618521142/Townly_zvskrx.png)
 
 ## MVP
 
