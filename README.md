@@ -12,7 +12,9 @@ The aim of this application is to connect users with tour guides and facilitate 
 
 ## Graphs and Diagrams
 
-[Our Data Flow]()
+#### Our Data Flow
+
+![Our Data Flow]()
 
 #### Our Component Hierarchy:
 
