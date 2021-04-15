@@ -26,4 +26,9 @@ The aim of this application is to connect users with tour guides and facilitate 
 
 ## Post-MVP
 
+- Custom Hook(s)
+- Search by Tour Type (Dropdown)
+- Notification for tour creator when someone signs up
+- Tour sign-up button w/ back-end user association
+
 ## Changelog
