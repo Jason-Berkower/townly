@@ -4,7 +4,7 @@
 
 ## Overview
 
-The aim of this application is to connect users with tour guides and facilitate memorable experiences. After creating a profile, users can explore our site at their leisure. Our tour postings can be freely browsed or filtered through via our search function. Once they've found a tour they like, our user can sign up for it and eagerly await their next adventure.
+The aim of this application is to connect users with tour guides and facilitate memorable experiences. Our tour postings can be freely browsed or filtered through via our search function. After creating a profile, users can access user-specific features. Once they've found a tour they like, our user can sign up for it and eagerly await their next adventure.
 
 ## Team Expectations
 
@@ -12,10 +12,14 @@ The aim of this application is to connect users with tour guides and facilitate 
 
 ## Graphs and Diagrams
 
-#### Data Flow
+[Our Data Flow]()
 
-#### Component Hierarchy
+[Our Component Hierarchy]()
 
 ## MVP
 
+[Our MVP](https://github.com/Jason-Berkower/townly/projects/1)
+
 ## Post-MVP
+
+## Changelog
