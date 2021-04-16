@@ -18,6 +18,10 @@ The aim of this application is to connect users with tour guides and facilitate 
 
 ![Our Component Hierarchy](https://res.cloudinary.com/mandatea/image/upload/v1618521142/Townly_zvskrx.png)
 
+#### Our Wireframes
+
+![Our Wireframes](https://res.cloudinary.com/mandatea/image/upload/v1618533941/Townly_Mock_UP_k0v9s7.png)
+
 ## MVP
 
 [Our MVP](https://github.com/Jason-Berkower/townly/projects/1)
