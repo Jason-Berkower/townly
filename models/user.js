@@ -5,7 +5,7 @@ const userSchema = new Schema(
   {
     username: { type: String, required: true },
     email: { type: String, required: true },
-    password_digest: { type: String, required: true },
+    password_digest: { type: String, required: false },
     is_tourGuide: { type: Boolean, required: true },
   },
   { timestamps: true }
