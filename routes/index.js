@@ -1,4 +1,5 @@
-const { Route } = require("express");
+const { Router } = require("express");
+const restrict = require("../helpers/restricted.js");
 const {
   signUp,
   signIn,
@@ -13,7 +14,10 @@ const {
   deleteTour,
 } = require("../controllers/tours");
 
+
+
 const router = Router();
+
 
 // For Users
 router.post("/sign-up", signUp);
@@ -24,8 +28,8 @@ router.put("/change-password/:id", changePassword);
 // For Tours
 router.get("/", getAllTours);
 router.get("/:id", getOneTour);
-router.post();
-router.put();
-router.delete();
+router.post("/", restrict, createTour);
+router.put("/:id", restrict, updateTour);
+router.delete("/:id", restrict, deleteTour);
 
 module.exports = router;
