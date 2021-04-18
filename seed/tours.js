@@ -6,7 +6,7 @@ const faker = require("faker");
 db.on("error", console.error.bind(console, "Mongo Connection Error"));
 
 const addTours = async () => {
-  await Tour.deleteMany();
+  await Tour.deleteMany({});
 
   const tours = [
     {
@@ -95,16 +95,11 @@ const addTours = async () => {
 
   //take out before production
   console.log("Tours created");
-
-  db.close();
-
-  //
 };
 
-// async function run() {
-//   await main();
-//   db.close();
-// }
+async function run() {
+  await addTours();
+  db.close();
+}
 
-// run();
-addTours();
+run();
