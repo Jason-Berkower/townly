@@ -75,21 +75,21 @@ const addTours = async () => {
     },
   ];
 
-  await Promise.all(
-    tours.map(async (tourToAdd) => {
-      let user = await User.findOne({
-        username: tourToAdd.tour_operator,
-      });
-      let what = (tourToAdd.tour_operator = user._id);
-      //   console.log(what);
+  // await Promise.all(
+  //   tours.map(async (tourToAdd) => {
+  //     let user = await User.findOne({
+  //       username: tourToAdd.tour_operator,
+  //     });
+  //     let what = (tourToAdd.tour_operator = user._id);
+  //     //   console.log(what);
 
-      const tour = await Tour.create(what);
-      console.log(what);
+  //     const tour = await Tour.create(what);
+  //     console.log(what);
 
-      await user.tours.push(tour._id);
-      await user.save();
-    })
-  );
+  //     await user.tours.push(tour._id);
+  //     await user.save();
+  //   })
+  // );
 
   await Tour.insertMany(tours);
 
