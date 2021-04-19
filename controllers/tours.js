@@ -27,6 +27,30 @@ const getOneTour = async (req, res) => {
 
 const createTour = async (req, res) => {
   try {
+    const {
+      name,
+      tour_operator,
+      date,
+      time,
+      type,
+      price,
+      description,
+      popularity,
+      imgURL,
+    } = req.body;
+    let createdTour = new Tour({
+      name,
+      tour_operator,
+      date,
+      time,
+      type,
+      price,
+      description,
+      popularity,
+      imgURL,
+    });
+    await createdTour.save();
+    return res.status(200).json(createdTour);
   } catch (error) {
     return res.status(500).json({ error: error.message });
   }
