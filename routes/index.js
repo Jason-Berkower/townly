@@ -24,13 +24,13 @@ router.post("/sign-in", signIn);
 router.get("/verify", verify);
 router.put("/change-password/:id", changePassword);
 router.get("/users", getAllUsers),
-  router.get("/users/:id", getOneUser)
+router.get("/users/:id", getOneUser)
 
 // For Tours
-router.get("/", getAllTours);
-router.get("/:id", getOneTour);
-router.post("/", restrict, createTour);
-router.put("/:id", restrict, updateTour);
-router.delete("/:id", restrict, deleteTour);
+router.get("/tours", getAllTours);
+router.get("/tours/:id", getOneTour);
+router.post("/tours", restrict, createTour);
+router.put("/tours/:id", restrict, updateTour);
+router.delete("/tours/:id", restrict, deleteTour);
 
 module.exports = router;
