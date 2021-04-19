@@ -13,6 +13,7 @@ const {
   updateTour,
   deleteTour,
 } = require("../controllers/tours");
+const restrict = require("../helpers/restricted.js");
 
 
 
