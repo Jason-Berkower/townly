@@ -7,7 +7,7 @@ const userSchema = new Schema(
     email: { type: String, required: true },
     password_digest: { type: String, required: false },
     is_tourGuide: { type: Boolean, required: true },
-    tours: [{ type: Schema.Types.ObjectId, ref: "Post" }]
+    tours: [{ type: Schema.Types.ObjectId, ref: "Tour" }]
   },
   { timestamps: true }
 );
