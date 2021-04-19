@@ -5,6 +5,7 @@ const {
   signIn,
   verify,
   changePassword,
+  getAllUsers
 } = require("../controllers/users");
 const {
   getAllTours,
@@ -21,6 +22,7 @@ router.post("/sign-up", signUp);
 router.post("/sign-in", signIn);
 router.get("/verify", verify);
 router.put("/change-password/:id", changePassword);
+router.get("/users", getAllUsers)
 
 // For Tours
 router.get("/", getAllTours);
