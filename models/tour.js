@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 const tourSchema = new Schema(
   {
     name: { type: String, required: true },
-    tour_operator: { type: Schema.Types.ObjectId, ref: "User" },
+    // tour_operator: { type: Schema.Types.ObjectId, ref: "User" },
+    tour_operator: { type: String, required: true },
     date: { type: Date, required: true },
     time: { type: String, required: true },
     type: { type: String, required: true },

@@ -16,6 +16,7 @@ const {
 
 const router = Router();
 
+
 // For Users
 router.post("/sign-up", signUp);
 router.post("/sign-in", signIn);
@@ -28,5 +29,6 @@ router.get("/:id", getOneTour);
 router.post("/", restrict, createTour);
 router.put("/:id", restrict, updateTour);
 router.delete("/:id", restrict, deleteTour);
+
 
 module.exports = router;
