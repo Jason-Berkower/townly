@@ -84,7 +84,7 @@ const addTours = async () => {
       });
 
       //update object with tour ID
-      tourToAdd.tour_operator = user._id
+      tourToAdd.tour_operator = user.username
 
       const tour = await Tour.create(tourToAdd);
       // console.log(tour)
