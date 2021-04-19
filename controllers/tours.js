@@ -34,16 +34,17 @@ const createTour = async (req, res) => {
 
 const updateTour = async (req, res) => {
   try {
-    const updateTour = await Tour.findByIdAndUpdate(
-      req.params.id,
-      req.body,
-      { new: true }
-    )
+    const updateTour = await Tour.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+    });
     if (updateTour) {
-      return res.status(202).send("Tour Updated!")
+      return res.status(202).send("Tour Updated!");
     } else {
-      return res.status(404).send("Tour not found")
+      return res.status(404).send("Tour not found");
     }
+  } catch (error) {
+    return res.status(500).json({ error: error.message });
+  }
 };
 
 const deleteTour = async (req, res) => {
