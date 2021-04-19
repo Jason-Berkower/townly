@@ -44,9 +44,6 @@ const updateTour = async (req, res) => {
     } else {
       return res.status(404).send("Tour not found")
     }
-  } catch (error) {
-    return res.status(500).json({ error: error.message });
-  }
 };
 
 const deleteTour = async (req, res) => {

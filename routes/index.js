@@ -13,9 +13,6 @@ const {
   updateTour,
   deleteTour,
 } = require("../controllers/tours");
-const restrict = require("../helpers/restricted.js");
-
-
 
 const router = Router();
 
@@ -32,5 +29,6 @@ router.get("/:id", getOneTour);
 router.post("/", restrict, createTour);
 router.put("/:id", restrict, updateTour);
 router.delete("/:id", restrict, deleteTour);
+
 
 module.exports = router;
