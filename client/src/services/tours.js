@@ -1,3 +1,4 @@
+
 import api from "./apiConfig";
 
 export const getAllTours = async () => {
@@ -28,3 +29,4 @@ export const deleteTour = async (id) => {
   let res = await api.delete(`/tours/${id}`);
   return res.data;
 };
+
