@@ -1,25 +1,20 @@
 import {Link} from "react-router-dom"
 
-export default function Nav() {
+export default function Nav(props) {
   const displayLinks = () => {
     if (props.currentUser) {
       return (
-        <ul>
-          <li>
+        <div>
             <button onClick={props.logout}>Sign Out</button>
-          </li>
-        </ul>
+        </div>
       );
     } else {
       return (
-        <ul>
-          <li>
+        <div>
             <Link to="/sign-in">Sign In</Link>
-          </li>
-          <li>
             <Link to="/sign-up">Sign Up</Link>
-          </li>
-        </ul>
+        </div>
+          
       );
     }
   };

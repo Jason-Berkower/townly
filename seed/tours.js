@@ -19,6 +19,7 @@ const tours = [
     price: 25,
     popularity: 10,
     imgURL: faker.image.nature(),
+    // location: faker.address.cityName(),
     location: [
       faker.address.streetAddress(),
       faker.address.cityName(),
@@ -35,6 +36,7 @@ const tours = [
     price: 50,
     popularity: 8,
     imgURL: faker.image.food(),
+    // location: faker.address.cityName(),
     location: [
       faker.address.streetAddress(),
       faker.address.cityName(),
@@ -51,6 +53,7 @@ const tours = [
     price: 15,
     popularity: 4,
     imgURL: faker.image.abstract(),
+    // location: faker.address.cityName(),
     location: [
       faker.address.streetAddress(),
       faker.address.cityName(),
@@ -67,6 +70,7 @@ const tours = [
     price: 30,
     popularity: 6,
     imgURL: faker.image.city(),
+    // location: faker.address.cityName(),
     location: [
       faker.address.streetAddress(),
       faker.address.cityName(),
