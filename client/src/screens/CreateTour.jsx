@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react"
-import { createTour } from "../services/tours"
+import { createTour, getAllTours } from "../services/tours"
 import {useHistory} from "react-router-dom"
 
 export default function CreateTour(props) {
+  const history = useHistory()
   let [tour, setTour] = useState({
     name: "",
     tour_operator: `${props.currentUser}`,
@@ -15,14 +16,36 @@ export default function CreateTour(props) {
     imgURL: "",
   })
 
-//handleChange
-//handleSubmit
+
+  // useEffect(() => {
+  //   getData()
+  // },[])
+  
+  // async function getData() {
+  //   let data = await getAllTours()
+  //   setTours(data)
+  // }
+  
+  function handleChange(event) {
+    let { id, value } = event.target
+    setTour((prevState) => ({
+      ...prevState, [id]: value
+    }))
+  }
+
+
+  async function handleSubmit(event) {
+    event.preventDefault()
+    await createTour(tour)
+    history.push("/tours")
+  }
+  
 //selector for time, type, price
   //imgURL - radio button of 3-5 images per type to select from
   
   return (
     <div>
-      <Layout>
+      <Layout user={props.user}>
         <h2>Post Your Tour</h2>
         <form onSubmit={handleSubmit}>
           <input id="name" placeholder="Tour Name" type="text" value={tour.name} onChange={handleChange} />
