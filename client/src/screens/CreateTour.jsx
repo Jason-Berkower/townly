@@ -11,7 +11,7 @@ export default function CreateTour(props) {
     tour_operator: "Created Tour Guide",
     date: "",
     time: "8",
-    type: "",
+    type: "adventure",
     description: "",
     price: "",
     popularity: 0,
@@ -35,7 +35,7 @@ export default function CreateTour(props) {
     history.push("/tours")
   }
   
-//selector for time, type, price
+
   //imgURL - radio button of 3-5 images per type to select from
   
   return (
@@ -78,11 +78,32 @@ export default function CreateTour(props) {
             <option value="23">11 pm</option>
           </select>
 
-          <input id="type" placeholder="Tour Type" type="text" value={tour.type} onChange={handleChange} />
 
-          <input id="description" placeholder="description" type="text" value={tour.description} onChange={handleChange} />
+          {/* <input id="type" placeholder="Tour Type" type="text" value={tour.type} onChange={handleChange} /> */}
+          <label htmlFor="type">Tour Type: </label>
+          <select id="type" form="tourform" value={tour.type} onChange={handleChange}>
+            <option value="adventure">Adventure</option>
+            <option value="walking">Walking</option>
+            <option value="ghost">Ghost</option>
+            <option value="museum">Museum</option>
+            <option value="cooking">Cooking</option>
+            <option value="active">Active</option>
+            <option value="sightseeing">Site Seeing</option>
+            <option value="show">Show</option>
+            <option value="animal">Animals</option>
+            <option value="historical">Historical</option>
+            <option value="tasting">Tasting</option>
+            <option value="personal">Personalized</option>
+          </select>
+
+          <input id="description" placeholder="Description" type="text" value={tour.description} onChange={handleChange} />
           
+          <label htmlFor="price">$</label>
           <input id="price" placeholder="Price" type="Number" value={tour.price} onChange={handleChange} />
+          {/* <label htmlFor="price">$ </label>
+          <select id="price" form="tourform" value={tour.price} onChange={handleChange}>
+          <option value="5">5</option>
+          </select> */}
           
           <input id="imgURL" placeholder="Image URL" type="text" value={tour.imgURL} onChange={handleChange} />
 
