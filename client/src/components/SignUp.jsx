@@ -1,8 +1,6 @@
-import e from 'cors';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { signIn, signUp } from '../services/users';
-import Layout from "../components/Layout";
 
 
 export default function SignUp(props) {
@@ -11,7 +9,7 @@ export default function SignUp(props) {
     email: '',
     password: '',
     passwordConfirmation: '',
-    isTourGuide: false,
+    is_tourGuide: false,
   };
 
   let history = useHistory();
@@ -27,27 +25,27 @@ export default function SignUp(props) {
   };
 
   const handleSubmit = async (event) => {
-    e.preventDefault();
+    event.preventDefault();
     await signUp(input);
     let res = await signIn(input);
 
     props.setCurrentUser(res.payload);
-    history.pushState('/');
+    history.push('/');
   };
 
   return (
     <div>
       <h3>Sign Up</h3>
-      <form onChange={handleChange} onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <label>Username</label>
-        <input name='username' value={input.username} placeholder='Enter username...' />
+        <input name='username' value={input.username} placeholder='Enter username...' onChange={handleChange} />
         <label>Email</label>
-        <input type='email' name='email' value={input.email} placeholder='Enter email...' />
+        <input type='email' name='email' value={input.email} placeholder='Enter email...' onChange={handleChange} />
         <label>Password</label>
-        <input type='password' name='password' value={input.password} placeholder='Enter password...' />
+        <input type='password' name='password' value={input.password} placeholder='Enter password...' onChange={handleChange} />
         <label>Confirm Password</label>
-        <input type='password' name='passwordConfirmation' value={input.passwordConfirmation} placeholder='Reenter password...' />
-        <input type='checkbox' id='tourGuideY' name='tourGuideY' value={input.isTourGuide} />
+        <input type='password' name='passwordConfirmation' value={input.passwordConfirmation} placeholder='Reenter password...' onChange={handleChange} />
+        <input type='checkbox' id='tourGuideY' name='tourGuideY' value={input.isTourGuide} onChange={handleChange} />
         <label>Tour Guide</label><br />
         <button type='submit'>Sign Up</button>
       </form>
