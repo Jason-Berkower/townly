@@ -7,7 +7,8 @@ export default function CreateTour(props) {
   const history = useHistory()
   let [tour, setTour] = useState({
     name: "",
-    tour_operator: `${props.currentUser}`,
+    // tour_operator: `${props.currentUser}`,
+    tour_operator: "Created Tour Guide",
     date: "",
     time: "",
     type: "",
@@ -36,6 +37,7 @@ export default function CreateTour(props) {
 
 
   async function handleSubmit(event) {
+    console.log(tour)
     event.preventDefault()
     await createTour(tour)
     history.push("/tours")
@@ -60,9 +62,9 @@ export default function CreateTour(props) {
 
           <input id="description" placeholder="description" type="text" value={tour.description} onChange={handleChange} />
           
-          <input id="price" placeholder="Price" type="text" value={tour.price} onChange={handleChange} />
+          <input id="price" placeholder="Price" type="Number" value={tour.price} onChange={handleChange} />
           
-          <input id="image" placeholder="Image URL" type="text" value={tour.imgURL} onChange={handleChange} />
+          <input id="imgURL" placeholder="Image URL" type="text" value={tour.imgURL} onChange={handleChange} />
 
           <input type = "submit"/>
 

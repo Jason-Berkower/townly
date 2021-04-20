@@ -29,7 +29,7 @@ router.get("/users/:id", getOneUser)
 // For Tours
 router.get("/tours", getAllTours);
 router.get("/tours/:id", getOneTour);
-router.post("/tours", restrict, createTour);
+router.post("/tours", createTour);
 router.put("/tours/:id", restrict, updateTour);
 router.delete("/tours/:id", restrict, deleteTour);
 
