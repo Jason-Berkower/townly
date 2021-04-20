@@ -19,12 +19,13 @@ const tours = [
     price: 25,
     popularity: 10,
     imgURL: faker.image.nature(),
-    // location: faker.address.cityName(),
-    location: [
-      faker.address.streetAddress(),
-      faker.address.cityName(),
-      faker.address.zipCode(),
-    ],
+    street: faker.address.streetAddress(),
+    city: "Buenos Aires",
+    // location: [
+    //   faker.address.streetAddress(),
+    //   faker.address.cityName(),
+    //   faker.address.zipCode(),
+    // ],
   },
   {
     name: faker.lorem.words(),
@@ -36,12 +37,13 @@ const tours = [
     price: 50,
     popularity: 8,
     imgURL: faker.image.food(),
-    // location: faker.address.cityName(),
-    location: [
-      faker.address.streetAddress(),
-      faker.address.cityName(),
-      faker.address.zipCode(),
-    ],
+    street: faker.address.streetAddress(),
+    city: faker.address.cityName(),
+    // location: [
+    //   faker.address.streetAddress(),
+    //   faker.address.cityName(),
+    //   faker.address.zipCode(),
+    // ],
   },
   {
     name: faker.lorem.words(),
@@ -53,12 +55,13 @@ const tours = [
     price: 15,
     popularity: 4,
     imgURL: faker.image.abstract(),
-    // location: faker.address.cityName(),
-    location: [
-      faker.address.streetAddress(),
-      faker.address.cityName(),
-      faker.address.zipCode(),
-    ],
+    street: faker.address.streetAddress(),
+    city: faker.address.cityName(),
+    // location: [
+    //   faker.address.streetAddress(),
+    //   faker.address.cityName(),
+    //   faker.address.zipCode(),
+    // ],
   },
   {
     name: faker.lorem.words(),
@@ -70,12 +73,13 @@ const tours = [
     price: 30,
     popularity: 6,
     imgURL: faker.image.city(),
-    // location: faker.address.cityName(),
-    location: [
-      faker.address.streetAddress(),
-      faker.address.cityName(),
-      faker.address.zipCode(),
-    ],
+    street: faker.address.streetAddress(),
+    city: faker.address.cityName(),
+    // location: [
+    //   faker.address.streetAddress(),
+    //   faker.address.cityName(),
+    //   faker.address.zipCode(),
+    // ],
   },
 ];
 
