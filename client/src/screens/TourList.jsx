@@ -25,11 +25,11 @@ export default function ProductList(props) {
         return (
           <div>
             <h5>{tour.name}</h5> <img src={tour.imgURL} alt="" />
+            <img src={tour.imgURL} alt="" />
               <div>
                 <Link to={`/tours/${tour._id}`}>Show Details</Link>
-              </div>
-            </div>
-          
+              </div>            
+          </div>
         );
       })}
       </Layout>
