@@ -7,6 +7,8 @@ export default function Auth() {
 
   return (
     <div>
+      <Layout user={props.user}>
+
       <div id='sign-in'>
         <SignIn />
       </div>
@@ -14,6 +16,7 @@ export default function Auth() {
       <div id='sign-up'>
         <SignUp />
       </div>
+      </Layout>
     </div>
   )
 }

@@ -16,6 +16,8 @@ export default function ProductList() {
 
   return (
     <div>
+      <Layout user={props.user}>
+
       <h3>Our Tours</h3>
       {tours.map((tour) => {
         return (
@@ -27,6 +29,7 @@ export default function ProductList() {
           </div>
         );
       })}
+      </Layout>
     </div>
   );
 }
