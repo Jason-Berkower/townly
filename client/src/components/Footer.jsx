@@ -10,10 +10,13 @@ export default function Footer() {
       </div>
       <div id="devLinks">
         
-      <h4>Check Out the Developers Works!</h4>
-      <Link to="https://github.com/amandaphail">Amanda</Link>
-      <Link to="https://github.com/Jason-Berkower">Jason</Link>
-      <Link to="https://github.com/PecoDory">Paco</Link>
+        <h4>Check Out the Developers Works!</h4>
+        <a href="https://github.com/amandaphail">Amanda</a>
+        {/* <Link to="https://github.com/amandaphail">Amanda</Link> */}
+        <a href="https://github.com/Jason-Berkower">Jason</a>
+        {/* <Link to="https://github.com/Jason-Berkower">Jason</Link> */}
+        <a href ="https://github.com/PecoDory">Paco</a>
+      {/* <Link to="https://github.com/PecoDory">Paco</Link> */}
       </div>
     </div>
   )
