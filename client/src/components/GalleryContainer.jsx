@@ -20,15 +20,21 @@ export default function GalleryContainer() {
 
   console.log(tours)
 
+  
+
   return (
     <div>
       <h2>Our Top Tours</h2>
       <div id="gallery">
         <button>Back</button>
         <div id="tourcontainer">
-          {tours.map((tour, index) => {
-            return <TopTour key={index} tour={tour}/>
-          })}
+        {tours.map((tour, index) => {
+          if (tour.popularity >= 8) {
+            return <TopTour key={index} tour={tour} />
+      // console.log(tour)
+            }
+          })
+        }
         </div>
         <button>Next</button>
       </div>

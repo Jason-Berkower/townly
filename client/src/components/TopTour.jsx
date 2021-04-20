@@ -12,8 +12,8 @@ let TopTour = props.tour
   
   return (
     <div>
-      TopTour
-       {/* {TopTour.name} */}
+      
+       {TopTour.name}
     </div>
   )
 }
