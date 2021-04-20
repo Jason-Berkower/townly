@@ -16,6 +16,9 @@ export default function CreateTour(props) {
     price: "",
     popularity: 0,
     imgURL: "",
+    street: "",
+    city: "",
+    country: "",
   })
 
   
@@ -24,7 +27,6 @@ export default function CreateTour(props) {
     setTour((prevState) => ({
       ...prevState, [id]: value
     }))
-    console.log(tour.time)
   }
 
 
@@ -107,9 +109,13 @@ export default function CreateTour(props) {
           
           <input id="imgURL" placeholder="Image URL" type="text" value={tour.imgURL} onChange={handleChange} />
 
-          <input type = "submit"/>
+          <input id="street" placeholder="Street" type="text" value={tour.street} onChange={handleChange} />
 
-          
+          <input id="city" placeholder="City" type="text" value={tour.city} onChange={handleChange} />
+
+          <input id="country" placeholder="Country" type="text" value={tour.country} onChange={handleChange} />
+
+          <input type = "submit"/>
 
         </form>
       </Layout>
