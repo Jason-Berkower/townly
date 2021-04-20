@@ -1,0 +1,36 @@
+{
+  "name": "townly",
+  "version": "1.0.0",
+  "description": "![alt text](https://cdn.vox-cdn.com/thumbor/yQHSklJdJIVQTP_x3lWg17NpHQo=/0x0:3793x2544/1320x743/filters:focal(1593x969:2199x1575):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/64047650/_MG_0506-2.0.0.1484272330.0.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seedUser": "node seed/users.js",
+    "seedTour": "node seed/tours.js",
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jason-Berkower/townly.git"
+  },
+  "keywords": [],
+  "author": "Cats Or Your Money Back - Jason, Amanda, Paco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jason-Berkower/townly/issues"
+  },
+  "homepage": "https://github.com/Jason-Berkower/townly#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "faker": "^5.5.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.4",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
