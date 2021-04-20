@@ -1,4 +1,3 @@
-import e from 'cors';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { signIn } from '../services/users';

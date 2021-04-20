@@ -1,22 +1,30 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Route, Link, Switch } from "react-router-dom";
 import Home from "./screens/Home.jsx";
 import TourList from "./screens/TourList";
 import TourDetails from "./screens/TourDetails";
 import CreateTour from "./screens/CreateTour";
-import Auth from "./screens/Auth"
-import SignIn from "./screens/Auth"
-import SignUp from "./screens/Auth"
-
+import Auth from "./screens/Auth";
+import SignIn from "./screens/Auth";
+import SignUp from "./screens/Auth";
+import { verifyUser } from "./services/users";
 
 function App() {
-const [currentUser, setCurrentUser] = useState(null);
+  const [currentUser, setCurrentUser] = useState(null);
   const logout = async () => {
     await localStorage.clear();
     setCurrentUser(null);
   };
-  
+
+  useEffect(() => {
+    requestVerification();
+  }, []);
+
+  const requestVerification = async () => {
+    const user = await verifyUser();
+    setCurrentUser(user);
+  };
 
   return (
     <div className="App">
@@ -34,7 +42,7 @@ const [currentUser, setCurrentUser] = useState(null);
           <CreateTour />
         </Route>
         <Route exact path="/auth">
-          <Auth/>
+          <Auth setCurrentUser={setCurrentUser} />
         </Route>
       </Switch>
     </div>
