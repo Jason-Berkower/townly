@@ -13,6 +13,12 @@ const tourSchema = new Schema(
     price: { type: Number, required: true },
     popularity: { type: Number, required: true },
     imgURL: { type: String, required: true },
+    // location: {type: String, required: true},
+    // location: [
+    //   { type: String, required: true },
+    //   { type: String, required: true },
+    //   {type: String, required: true},
+    // ]
   },
   {
     timestamps: true,
