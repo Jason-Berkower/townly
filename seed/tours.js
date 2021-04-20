@@ -21,6 +21,7 @@ const tours = [
     imgURL: faker.image.nature(),
     street: faker.address.streetAddress(),
     city: "Buenos Aires",
+    country: "Argentina"
     // location: [
     //   faker.address.streetAddress(),
     //   faker.address.cityName(),
@@ -39,6 +40,7 @@ const tours = [
     imgURL: faker.image.food(),
     street: faker.address.streetAddress(),
     city: faker.address.cityName(),
+    country: faker.address.country(),
     // location: [
     //   faker.address.streetAddress(),
     //   faker.address.cityName(),
@@ -57,6 +59,7 @@ const tours = [
     imgURL: faker.image.abstract(),
     street: faker.address.streetAddress(),
     city: faker.address.cityName(),
+    country: faker.address.country(),
     // location: [
     //   faker.address.streetAddress(),
     //   faker.address.cityName(),
@@ -75,6 +78,7 @@ const tours = [
     imgURL: faker.image.city(),
     street: faker.address.streetAddress(),
     city: faker.address.cityName(),
+    country: faker.address.country(),
     // location: [
     //   faker.address.streetAddress(),
     //   faker.address.cityName(),
