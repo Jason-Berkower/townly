@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import { getAllTours } from "../services/tours";
 import { Link } from "react-router-dom";
-import Layout from "../components/Layout";
+import Layout from "../components/Layout"
 
-export default function ProductList() {
+
+export default function ProductList(props) {
   const [tours, setTours] = useState([]);
 
   useEffect(() => {
@@ -17,18 +18,22 @@ export default function ProductList() {
 
   return (
     <div>
-      <Layout>
-        <h3>Our Tours</h3>
-        {tours.map((tour) => {
-          return (
+      <Layout user={props.user}>
+
+      <h3>Our Tours</h3>
+      {tours.map((tour) => {
+        return (
+          <div>
+            <h5>{tour.name}</h5> <img src={tour.imgURL} alt="" />
             <div>
               <h5>{tour.name}</h5> <img src={tour.imgURL} alt="" />
               <div>
                 <Link to={`/tour/${tour._id}`}>Show Details</Link>
               </div>
             </div>
-          );
-        })}
+          </div>
+        );
+      })}
       </Layout>
     </div>
   );

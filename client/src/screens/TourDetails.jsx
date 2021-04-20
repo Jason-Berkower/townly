@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { getTourById } from "../services/tours";
+import Layout from "../components/Layout"
 
 export default function TourDetails(props) {
   const { id } = useParams();
@@ -17,6 +18,8 @@ export default function TourDetails(props) {
 
   return (
     <div>
+      <Layout user={props.user}>
+
       <h1>{tourDetails.name}</h1>
       <h3>{tourDetails.type}</h3>
       <img src={tourDetails.imgURL} alt={`${tourDetails.type} tour`} />
@@ -31,7 +34,8 @@ export default function TourDetails(props) {
         //have to check current user is same as user who created tour
         <Link to={`/edit-tour/${tourDetails._id}`}>Edit Tour</Link>
         //create edit link
-      )}
+        )}
+        </Layout>
     </div>
   );
 }

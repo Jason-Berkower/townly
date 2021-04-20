@@ -9,7 +9,13 @@ import Auth from "./screens/Auth"
 import SignIn from "./screens/Auth"
 import SignUp from "./screens/Auth"
 
+
 function App() {
+const [currentUser, setCurrentUser] = useState(null);
+  const logout = async () => {
+    await localStorage.clear();
+    setCurrentUser(null);
+  };
   
 
   return (
