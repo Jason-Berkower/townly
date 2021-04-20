@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import SignIn from '../components/SignIn';
 import SignUp from '../components/SignUp';
-import Layout from "../components/Layout"
+import Layout from "../components/Layout";
 
 
 export default function Auth(props) {
@@ -11,11 +11,11 @@ export default function Auth(props) {
       <Layout user={props.user}>
 
         <div id='sign-in'>
-          <SignIn />
+          <SignIn setCurrentUser={props.setCurrentUser} />
         </div>
         <div id='separator' />
         <div id='sign-up'>
-          <SignUp />
+          <SignUp setCurrentUser={props.setCurrentUser} />
         </div>
       </Layout>
     </div>
