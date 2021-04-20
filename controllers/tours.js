@@ -37,6 +37,9 @@ const createTour = async (req, res) => {
       description,
       popularity,
       imgURL,
+      street,
+      city,
+      country,
     } = req.body;
     let createdTour = new Tour({
       name,
@@ -48,6 +51,9 @@ const createTour = async (req, res) => {
       description,
       popularity,
       imgURL,
+      street,
+      city,
+      country,
     });
     await createdTour.save();
     return res.status(200).json(createdTour);
