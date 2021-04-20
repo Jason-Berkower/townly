@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react"
-import { createTour, getAllTours } from "../services/tours"
+import { useState } from "react"
+import { createTour} from "../services/tours"
 import { useHistory } from "react-router-dom"
 import Layout from "../components/Layout"
 
@@ -18,21 +18,13 @@ export default function CreateTour(props) {
     imgURL: "",
   })
 
-
-  // useEffect(() => {
-  //   getData()
-  // },[])
-  
-  // async function getData() {
-  //   let data = await getAllTours()
-  //   setTours(data)
-  // }
   
   function handleChange(event) {
     let { id, value } = event.target
     setTour((prevState) => ({
       ...prevState, [id]: value
     }))
+    console.log(tour.time)
   }
 
 
@@ -50,13 +42,19 @@ export default function CreateTour(props) {
     <div>
       <Layout user={props.user}>
         <h2>Post Your Tour</h2>
-        <form onSubmit={handleSubmit}>
+        <form id="tourform" onSubmit={handleSubmit}>
           <input id="name" placeholder="Tour Name" type="text" value={tour.name} onChange={handleChange} />
 
           <label htmlFor="date">Date: </label>
           <input id="date" type="date" value={tour.date} onChange={handleChange} />
 
-          <input id="time" placeholder="Tour Time" type="text" value={tour.time} onChange={handleChange} />
+          {/* <input id="time" placeholder="Tour Time" type="text" value={tour.time} onChange={handleChange} /> */}
+
+          <label htmlFor="time">Tour Time: </label>
+          <select id="time" form="tourform" value={tour.time} onChange={handleChange}>
+            <option value="8">8 am</option>
+            <option value="9">9 am</option>
+          </select>
 
           <input id="type" placeholder="Tour Type" type="text" value={tour.type} onChange={handleChange} />
 
@@ -75,3 +73,6 @@ export default function CreateTour(props) {
     </div>
   )
 }
+
+//understanding using select tag in react
+//https://reactjs.org/docs/forms.html
