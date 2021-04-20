@@ -2,6 +2,8 @@ import e from 'cors';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { signIn, signUp } from '../services/users';
+import Layout from "../components/Layout";
+
 
 export default function SignUp(props) {
   const defaultInput = {
@@ -34,6 +36,7 @@ export default function SignUp(props) {
 
   return (
     <div>
+      <Layout>
       <h3>Sign Up</h3>
       <form onChange={handleChange} onSubmit={handleSubmit}>
         <label>Username</label>
@@ -45,7 +48,8 @@ export default function SignUp(props) {
         <label>Confirm Password</label>
         <input type='password' name='passwordConfirmation' value={input.passwordConfirmation} placeholder='Reenter password...' />
         <button type='submit'>Sign Up</button>
-      </form>
+        </form>
+      </Layout>
     </div>
   )
 };

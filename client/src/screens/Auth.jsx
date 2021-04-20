@@ -19,5 +19,5 @@ export default function Auth(props) {
       </div>
       </Layout>
     </div>
-  )
+  );
 }
