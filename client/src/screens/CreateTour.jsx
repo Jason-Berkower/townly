@@ -9,6 +9,7 @@ export default function CreateTour(props) {
     name: "",
     // tour_operator: `${props.currentUser}`,
     tour_operator: "Created Tour Guide",
+    //populate with username - params
     date: "",
     time: "8",
     type: "adventure",

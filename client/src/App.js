@@ -20,7 +20,7 @@ function App() {
 
 
   return <div className="App">
-    <Nav currentUser={currentUser} logout={logout} />
+    {/* <Nav currentUser={currentUser} logout={logout} /> */}
    <Switch> 
     <Route exact path="/">
     <Home />
