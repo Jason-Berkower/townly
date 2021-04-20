@@ -36,12 +36,6 @@ const [currentUser, setCurrentUser] = useState(null);
         <Route exact path="/auth">
           <Auth/>
         </Route>
-        {/* <Route exact path="/sign-in">
-          <SignIn/>
-        </Route>
-        <Route exact path="/sign-up">
-          <SignUp/>
-        </Route> */}
       </Switch>
     </div>
   );
