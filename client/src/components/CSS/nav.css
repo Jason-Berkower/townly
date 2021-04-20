@@ -1,0 +1,40 @@
+h1 {
+  font-size: 40px;
+  margin-left: 10px;
+}
+
+#nav {
+  background-color: rgb(238, 155, 2);
+  margin: 0 auto;
+  padding: 5px;
+  color: rgb(250, 247, 247);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#everyoneslinks {
+  width: 300px;
+  margin: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#account {
+  width: 200px;
+  margin: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
