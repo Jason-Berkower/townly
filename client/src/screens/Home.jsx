@@ -11,7 +11,7 @@ export default function Home(props) {
   //if tour popularity =< 8 populate here
 
   return (
-    <Layout>
+    
     <div>
       <Layout user={props.user}>
         <h2>Townly</h2>
@@ -23,6 +23,6 @@ export default function Home(props) {
         </div>
       </Layout>
     </div>
-    </Layout>
+    
   )
 }
