@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { createTour, getAllTours } from "../services/tours"
-import {useHistory} from "react-router-dom"
+import { useHistory } from "react-router-dom"
+import Layout from "../components/Layout"
 
 export default function CreateTour(props) {
   const history = useHistory()
@@ -51,7 +52,7 @@ export default function CreateTour(props) {
           <input id="name" placeholder="Tour Name" type="text" value={tour.name} onChange={handleChange} />
 
           <label htmlFor="date">Date: </label>
-          <input id="date" type="date" value="tour.date" onChange={handleChange} />
+          <input id="date" type="date" value={tour.date} onChange={handleChange} />
 
           <input id="time" placeholder="Tour Time" type="text" value={tour.time} onChange={handleChange} />
 

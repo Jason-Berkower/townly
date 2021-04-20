@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom"
 
-export default function Nav() {
+export default function Nav(props) {
   const displayLinks = () => {
     if (props.currentUser) {
       return (
