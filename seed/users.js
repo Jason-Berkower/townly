@@ -24,7 +24,7 @@ const main = async () => {
       username: "Jason_the_Viking",
       email: "jason@longship.nor",
       password_digest: "",
-      is_tourGuide: false,
+      is_tourGuide: true,
     },
     {
       username: faker.internet.userName(),
