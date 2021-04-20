@@ -1,7 +1,9 @@
 const mongoose = require("mongoose");
+const mongoDBUri =
+  process.env.PROD_DB || "mongodb://127.0.0.1:27017/tourDatabase";
 
 mongoose
-  .connect("mongodb://127.0.0.1:27017/tourDatabase", {
+  .connect(mongoDBUri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
