@@ -10,13 +10,13 @@ export default function Auth(props) {
     <div>
       <Layout user={props.user}>
 
-      <div id='sign-in'>
-        <SignIn />
-      </div>
-      <div id='separator' />
-      <div id='sign-up'>
-        <SignUp />
-      </div>
+        <div id='sign-in'>
+          <SignIn />
+        </div>
+        <div id='separator' />
+        <div id='sign-up'>
+          <SignUp />
+        </div>
       </Layout>
     </div>
   );

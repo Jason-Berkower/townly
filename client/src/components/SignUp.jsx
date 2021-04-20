@@ -11,6 +11,7 @@ export default function SignUp(props) {
     email: '',
     password: '',
     passwordConfirmation: '',
+    isTourGuide: false,
   };
 
   let history = useHistory();
@@ -24,6 +25,17 @@ export default function SignUp(props) {
       [name]: value,
     }));
   };
+
+  let checkbox = document.querySelector('input[name=tourGuideY]');
+
+  checkbox.addEventListener('change', function () {
+    if (this.checked) {
+      setInput((prevInput) => ({
+        ...prevInput,
+        isTourGuide: true,
+      }));
+    }
+  });
 
   const handleSubmit = async (event) => {
     e.preventDefault();
@@ -47,6 +59,8 @@ export default function SignUp(props) {
         <input type='password' name='password' value={input.email} placeholder='Enter password...' />
         <label>Confirm Password</label>
         <input type='password' name='passwordConfirmation' value={input.passwordConfirmation} placeholder='Reenter password...' />
+        <input type='checkbox' id='tourGuideY' name='tourGuideY' value={input.isTourGuide} />
+        <label>Tour Guide</label><br />
         <button type='submit'>Sign Up</button>
         </form>
       </Layout>
