@@ -1,15 +1,29 @@
 import "./App.css";
+import { useState } from "react";
 import TourDetails from "./screens/TourDetails";
-import {Route, Link, Switch} from "react-router-dom"
 import CreateTour from "./screens/CreateTour.jsx"
-
+import Nav from "./components/Nav.jsx"
+import Home from "./screens/Home.jsx"
+import {Route, Link, Switch} from "react-router-dom"
 
 
 function App() {
+  const [currentUser, setCurrentUser] = useState(null);
+
+  const logout = async () => {
+    await localStorage.clear();
+    setCurrentUser(null);
+  };
+
+
+
+
+
   return <div className="App">
+    <Nav currentUser={currentUser} logout={logout} />
    <Switch> 
     <Route exact path="/">
-    <div>home</div>
+    <Home />
     </Route>
     <Route exact path="/tours/:id">
     <TourDetails />
