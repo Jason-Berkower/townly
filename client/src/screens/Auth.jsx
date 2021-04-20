@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
+import Layout from "../components/Layout"
 
 
-export default function Auth() {
+export default function Auth(props) {
 
   return (
     <div>

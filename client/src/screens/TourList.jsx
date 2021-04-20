@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { getAllTours } from "../services/tours";
 import { Link } from "react-router-dom";
+import Layout from "../components/Layout"
 
-export default function ProductList() {
+export default function ProductList(props) {
   const [tours, setTours] = useState([]);
 
   useEffect(() => {
