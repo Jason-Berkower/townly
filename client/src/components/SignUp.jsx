@@ -45,7 +45,7 @@ export default function SignUp(props) {
         <input type='password' name='password' value={input.password} placeholder='Enter password...' onChange={handleChange} />
         <label>Confirm Password</label>
         <input type='password' name='passwordConfirmation' value={input.passwordConfirmation} placeholder='Reenter password...' onChange={handleChange} />
-        <input type='checkbox' id='tourGuideY' name='tourGuideY' value={input.isTourGuide} onChange={handleChange} />
+        <input type='checkbox' id='is_tourGuide' name='is_tourGuide' value={input.is_tourGuide} onChange={handleChange} />
         <label>Tour Guide</label><br />
         <button type='submit'>Sign Up</button>
       </form>
