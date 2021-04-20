@@ -2,6 +2,8 @@ import e from 'cors';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { signIn } from '../services/users';
+import Layout from "../components/Layout";
+
 
 export default function SignIn(props) {
   const defaultInput = {
