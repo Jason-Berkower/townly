@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState, useEffect } from "react";
-import { Route, Link, Switch, Redirect } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import Home from "./screens/Home.jsx";
 import TourList from "./screens/TourList";
 import TourDetails from "./screens/TourDetails";
@@ -34,16 +34,19 @@ function App() {
   };
 
   const renderEdit = () => {
-    if (currentUser) {
+    if (tourGuide) {
       return <EditTour />;
     } else {
-      return <Redirect to="/sign-in" />;
+      return <Redirect to="/auth" />;
     }
   };
 
   // console.log("current user");
   // console.log(currentUser);
 
+  // console.log("current user");
+  // console.log(currentUser);
+  
   return (
     <div className="App">
       <Switch>

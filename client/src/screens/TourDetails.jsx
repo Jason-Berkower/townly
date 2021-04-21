@@ -4,6 +4,7 @@ import api from "../services/apiConfig";
 import { getTourById, deleteTour } from "../services/tours";
 
 export default function TourDetails(props) {
+  // hi paco
   const { id } = useParams();
   const [tourDetails, setTourDetails] = useState({});
 
