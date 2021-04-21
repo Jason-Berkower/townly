@@ -30,9 +30,7 @@ function App() {
     } else {
       setCurrentUser(user);
     }
-
-    // console.log(user)
-
+    console.log(user);
   };
 
   const renderEdit = () => {
@@ -43,8 +41,8 @@ function App() {
     }
   };
 
-
-  //  console.log("tour guide:",tourGuide)
+  console.log("current user");
+  console.log(currentUser);
 
   // console.log("current user");
   // console.log(currentUser);
@@ -57,7 +55,7 @@ function App() {
             <Home />
           </Route>
           <Route exact path="/tours/:id">
-            <TourDetails />
+            <TourDetails tourGuide={tourGuide} />
           </Route>
           <Route exact path="/tours">
             <TourList />
@@ -71,7 +69,6 @@ function App() {
           <Route exact path="/auth">
             <Auth setCurrentUser={setCurrentUser} setTourGuide={setTourGuide} />
           </Route>
-
         </Layout>
       </Switch>
     </div>
