@@ -12,14 +12,21 @@ let TopTour = props.tour
   // console.log(TopTour)
   
   return (
-    <div id="unique Tour">
+    <div className="uniquetour">
   
-      <Paper>
+      <Paper className="paper">
+
         <img id="image" src={TopTour.imgURL} alt="Top Tour" />
-        <br/>
-        {TopTour.name}
+        <div className = "info">
+          <div id="details">
+
+          {TopTour.name}
+          {TopTour.tour_operator}
+          {/* {TopTour.description} */}
+          </div>
         <Button>Check it out!</Button>
         {/* <Link to=`/tours/${TopTour._id}` */}
+        </div>
       </Paper>
     </div>
   )

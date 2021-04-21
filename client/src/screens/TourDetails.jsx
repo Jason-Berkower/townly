@@ -1,21 +1,39 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { getTourById } from "../services/tours";
+import api from "../services/apiConfig";
+import { getTourById, deleteTour } from "../services/tours";
 
 export default function TourDetails(props) {
   const { id } = useParams();
   let tourGuide = props.tourGuide && props.tourGuide.is_tourGuide 
   const [tourDetails, setTourDetails] = useState({});
 
+  let tourGuide = props.tourGuide && props.tourGuide.is_tourGuide
+  console.log(tourGuide);
+
   useEffect(() => {
     getTourDetails();
+    deleteyBoy();
   }, []);
 
   const getTourDetails = async () => {
     const data = await getTourById(id);
     setTourDetails(data);
   };
-  console.log(tourDetails);
+  // console.log(tourDetails);
+
+  const deleteyBoy = () => {
+
+    if (tourGuide) {
+      const handleDelete = (event) => {
+        deleteTour(id);
+      }
+      return (
+        <button onClick={handleDelete}>Delete Tour</button>
+      );
+    }
+    return null;
+  }
 
   return (
     <div>
@@ -38,6 +56,7 @@ export default function TourDetails(props) {
       {/* //have to check current user is same as user who created tour */}
       <Link to={`/edit-tour/${tourDetails._id}`}>Edit Tour</Link>
       {/* //create edit link */}
+      <div>{deleteyBoy()}</div>
     </div>
   );
 }
