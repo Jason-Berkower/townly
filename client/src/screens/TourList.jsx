@@ -24,7 +24,7 @@ export default function ProductList(props) {
       {tours.map((tour) => {
         return (
           <div>
-            <h5>{tour.name}</h5> <img src={tour.imgURL} alt="" />
+            <h5>{tour.name}</h5> 
             <img src={tour.imgURL} alt="" />
               <div className="tour-edit">
                 <Link to={`/tours/${tour._id}`}>show details</Link>

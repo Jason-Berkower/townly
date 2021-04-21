@@ -1,4 +1,5 @@
 import Layout from "../components/Layout"
+// import "./CSS/home.css"
 import GalleryContainer from "../components/GalleryContainer"
 import { Link } from "react-router-dom"
 
@@ -14,12 +15,12 @@ export default function Home(props) {
     
     <div>
       <Layout user={props.user}>
-        <h2>townly</h2>
         <GalleryContainer />
         <div id="buttons">
-          Browse All Tours
-          Want to Post a Tour?
-          Create an Account
+          <Link to="/tours">Browse All Tours</Link>
+          <Link to="create-tour">Want to Post a Tour?</Link>
+          {/* redirect to sign up if not signed in */}
+          <Link to="/auth">Create an Account</Link>
         </div>
       </Layout>
     </div>

@@ -74,7 +74,7 @@ const tours = [
     type: "historical",
     description: faker.lorem.paragraph(),
     price: 30,
-    popularity: 6,
+    popularity: 9,
     imgURL: faker.image.city(),
     street: faker.address.streetAddress(),
     city: faker.address.cityName(),
