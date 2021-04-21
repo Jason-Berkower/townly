@@ -49,7 +49,7 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        <Layout currentUser={currentUser} tourGuide={tourGuide} logout={logout}>
+        <Layout currentUser={currentUser} tourGuide={tourGuide} logout={logout} >
         <Route exact path="/">
           <Home />
         </Route>

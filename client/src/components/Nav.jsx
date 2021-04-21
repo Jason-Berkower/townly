@@ -33,7 +33,6 @@ export default function Nav(props) {
         <div id="everyoneslinks">
           <Link to="/">home</Link>
           <Link to="/tours">all tours</Link>
-          
         </div>
         <div>{displayLinks()}</div>
       </div>
