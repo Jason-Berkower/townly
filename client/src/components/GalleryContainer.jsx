@@ -1,4 +1,5 @@
 import TopTour from "./TopTour"
+import "./CSS/gallerycontainer.css"
 import { useState, useEffect } from "react";
 import { getAllTours } from "../services/tours";
 import Carousel from 'react-material-ui-carousel'
