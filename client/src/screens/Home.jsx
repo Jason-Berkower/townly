@@ -14,7 +14,7 @@ export default function Home(props) {
   return (
     
     <div>
-      <Layout user={props.user}>
+      
         <GalleryContainer />
         <div id="buttons">
           <Link to="/tours">Browse All Tours</Link>
@@ -22,7 +22,6 @@ export default function Home(props) {
           {/* redirect to sign up if not signed in */}
           <Link to="/auth">Create an Account</Link>
         </div>
-      </Layout>
     </div>
     
   )

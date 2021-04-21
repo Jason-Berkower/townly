@@ -11,11 +11,11 @@ export default function Auth(props) {
       <Layout user={props.user}>
 
         <div id='sign-in'>
-          <SignIn setCurrentUser={props.setCurrentUser} />
+          <SignIn setCurrentUser={props.setCurrentUser} setTourGuide={props.setTourGuide} />
         </div>
         <div id='separator' />
         <div id='sign-up'>
-          <SignUp setCurrentUser={props.setCurrentUser} />
+          <SignUp setCurrentUser={props.setCurrentUser} setTourGuide={props.setTourGuide}/>
         </div>
       </Layout>
     </div>

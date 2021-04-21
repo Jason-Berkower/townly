@@ -35,8 +35,11 @@ export default function SignUp(props) {
     event.preventDefault();
     await signUp(input);
     let res = await signIn(input);
-
-    props.setCurrentUser(res.payload);
+    if (res.payload.is_tourGuide === true) {
+      props.setTourGuide(res.payload)
+    } else {
+      props.setCurrentUser(res.payload)
+    }
     history.push('/');
   };
 

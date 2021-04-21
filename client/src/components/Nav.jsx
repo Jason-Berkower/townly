@@ -3,10 +3,16 @@ import "./CSS/nav.css";
 
 export default function Nav(props) {
   const displayLinks = () => {
+    console.log(props)
     if (props.currentUser) {
+      <div>
+        <button onClick={props.logout}>sign out</button>
+      </div>
+    } else if (props.tourGuide) {
       return (
         <div>
           <button onClick={props.logout}>sign out</button>
+          <Link to="/create-tour">post tour</Link>
         </div>
       );
     } else {
@@ -27,7 +33,7 @@ export default function Nav(props) {
         <div id="everyoneslinks">
           <Link to="/">home</Link>
           <Link to="/tours">all tours</Link>
-          <Link to="/create-tour">post tour</Link>
+          
         </div>
         <div>{displayLinks()}</div>
       </div>
