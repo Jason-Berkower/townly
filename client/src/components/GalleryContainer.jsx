@@ -51,7 +51,7 @@ export default function GalleryContainer() {
       <div id="gallery">
         <button>Back</button>
         <div id="tourcontainer">
-          {/* <Carousel> */}
+          <Carousel>
           {tours.map((tour, index) => {
             if (tour.popularity >= 8) {
                 return <TopTour key={index} tour={tour} />
@@ -59,7 +59,7 @@ export default function GalleryContainer() {
               }
             })
           }
-        {/* </Carousel> */}
+        </Carousel>
         </div>
         <button>Next</button>
       </div>

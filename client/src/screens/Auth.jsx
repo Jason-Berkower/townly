@@ -7,7 +7,6 @@ export default function Auth(props) {
 
   return (
     <div>
-
         <div id='sign-in'>
           <SignIn setCurrentUser={props.setCurrentUser} setTourGuide={props.setTourGuide} />
         </div>

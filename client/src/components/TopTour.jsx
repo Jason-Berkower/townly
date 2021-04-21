@@ -14,12 +14,12 @@ let TopTour = props.tour
   return (
     <div id="unique Tour">
   
-      {/* <Paper> */}
+      <Paper>
 
         <img id="image" src={TopTour.imgURL} alt="Top Tour image" />
         <br/>
         {TopTour.name}
-      {/* </Paper> */}
+      </Paper>
     </div>
   )
 }
