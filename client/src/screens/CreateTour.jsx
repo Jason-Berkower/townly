@@ -3,12 +3,20 @@ import { createTour} from "../services/tours"
 import { useHistory } from "react-router-dom"
 
 export default function CreateTour(props) {
+  
   const history = useHistory()
+
+
+  let tourGuide = props.tourGuide
+  console.log(tourGuide)
+  // tourGuide.map((info) => {
+  //   console.log(info)
+  // })
+
   let [tour, setTour] = useState({
     name: "",
-    // tour_operator: `${props.currentUser}`,
+    // tour_operator: {props.tourGuide.username},
     tour_operator: "Created Tour Guide",
-    //populate with username - params
     date: "",
     time: "8",
     type: "adventure",

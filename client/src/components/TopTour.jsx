@@ -9,7 +9,7 @@ let TopTour = props.tour
 
 // if (tour.popularity <= "8") {
 //   console.log(tour.tour_operator)
-  console.log(TopTour)
+  // console.log(TopTour)
   
   return (
     <div id="unique Tour">

@@ -3,7 +3,7 @@ import "./CSS/nav.css";
 
 export default function Nav(props) {
   const displayLinks = () => {
-    console.log(props)
+    // console.log(props)
     if (props.currentUser) {
       return (
         <div>
