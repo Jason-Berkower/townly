@@ -1,4 +1,4 @@
-import Layout from "../components/Layout"
+
 // import "./CSS/home.css"
 import GalleryContainer from "../components/GalleryContainer"
 import { Link } from "react-router-dom"

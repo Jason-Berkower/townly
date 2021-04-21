@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState, useEffect } from "react";
-import { Route, Link, Switch, Redirect } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import Home from "./screens/Home.jsx";
 import TourList from "./screens/TourList";
 import TourDetails from "./screens/TourDetails";

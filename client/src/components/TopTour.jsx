@@ -15,10 +15,11 @@ let TopTour = props.tour
     <div id="unique Tour">
   
       <Paper>
-
-        <img id="image" src={TopTour.imgURL} alt="Top Tour image" />
+        <img id="image" src={TopTour.imgURL} alt="Top Tour" />
         <br/>
         {TopTour.name}
+        <Button>Check it out!</Button>
+        {/* <Link to=`/tours/${TopTour._id}` */}
       </Paper>
     </div>
   )

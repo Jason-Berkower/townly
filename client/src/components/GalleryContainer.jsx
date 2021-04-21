@@ -2,7 +2,6 @@ import TopTour from "./TopTour"
 import { useState, useEffect } from "react";
 import { getAllTours } from "../services/tours";
 import Carousel from 'react-material-ui-carousel'
-import { Paper, Button } from '@material-ui/core'
 
 
 export default function GalleryContainer() {
