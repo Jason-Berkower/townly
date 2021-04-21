@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { getTourById } from "../services/tours";
 
 export default function TourDetails(props) {
+  // hi paco
   const { id } = useParams();
   const [tourDetails, setTourDetails] = useState({});
 
