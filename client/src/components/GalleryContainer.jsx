@@ -21,46 +21,35 @@ export default function GalleryContainer() {
   };
 
   console.log(tours)
+  
+  tours.map((tour, index) => {
+    if (tour.popularity >= 8) {
+      // console.log(tour)
+        return <TopTour key={index} tour={tour} />
+    } 
+    })
+  
 
   
-  // carousel
-
-//   let items = [
-//     {
-//         name: "Random Name #1",
-//         description: "Probably the most random thing you have ever seen!"
-//     },
-//     {
-//         name: "Random Name #2",
-//         description: "Hello World!"
-//     }
-// ]
   
-  // return (
-  //       <Carousel>
-  //     {tours.map((tour, i) => {
-  //       <TopTour key={i} item={tour} />
-  //     })}
-  //       </Carousel>
-  //   )
 
   return (
     <div>
       <h2>Our Top Tours</h2>
       <div id="gallery">
-        <button>Back</button>
         <div id="tourcontainer">
           <Carousel>
           {tours.map((tour, index) => {
             if (tour.popularity >= 8) {
                 return <TopTour key={index} tour={tour} />
                 // console.log(tour)
+            } else {
+              return null
               }
             })
           }
         </Carousel>
         </div>
-        <button>Next</button>
       </div>
     </div>
   )
