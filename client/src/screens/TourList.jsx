@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { getAllTours } from "../services/tours";
 import { Link } from "react-router-dom";
-import Layout from "../components/Layout"
 import "./CSS/tourlist.css"
 
 export default function ProductList(props) {
@@ -18,7 +17,7 @@ export default function ProductList(props) {
 
   return (
     <div>
-      <Layout user={props.user}>
+      {/* <Layout user={props.user}> */}
 
       <h2>townly tours</h2>
       {tours.map((tour) => {
@@ -32,7 +31,6 @@ export default function ProductList(props) {
           </div>
         );
       })}
-      </Layout>
     </div>
   );
 }

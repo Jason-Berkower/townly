@@ -1,16 +1,13 @@
 import { useState, useEffect } from "react";
 import { updateTour, getTourById } from "../services/tours";
 import { useHistory, useParams } from "react-router-dom";
-import Layout from "../components/Layout";
 
 export default function EditTour(props) {
   const { id } = useParams();
   const history = useHistory();
   let [tour, setTour] = useState({
     name: "",
-    // tour_operator: `${props.currentUser}`,
     tour_operator: "Created Tour Guide",
-    //populate with username - params
     date: "",
     time: "8",
     type: "adventure",
@@ -48,11 +45,9 @@ export default function EditTour(props) {
     setTour(data);
   };
 
-  //imgURL - radio button of 3-5 images per type to select from
   console.log(tour);
   return (
     <div>
-      <Layout user={props.user}>
         <h2>Edit Your Tour</h2>
         <form id="tourform" onSubmit={handleSubmit}>
           <input
@@ -71,7 +66,7 @@ export default function EditTour(props) {
             onChange={handleChange}
           />
 
-          {/* <input id="time" placeholder="Tour Time" type="text" value={tour.time} onChange={handleChange} /> */}
+          
 
           <label htmlFor="time">Tour Time: </label>
           <select
@@ -106,7 +101,7 @@ export default function EditTour(props) {
             <option value="23">11 pm</option>
           </select>
 
-          {/* <input id="type" placeholder="Tour Type" type="text" value={tour.type} onChange={handleChange} /> */}
+          
           <label htmlFor="type">Tour Type: </label>
           <select
             id="type"
@@ -144,10 +139,7 @@ export default function EditTour(props) {
             value={tour.price}
             onChange={handleChange}
           />
-          {/* <label htmlFor="price">$ </label>
-          <select id="price" form="tourform" value={tour.price} onChange={handleChange}>
-          <option value="5">5</option>
-          </select> */}
+          
 
           <input
             id="imgURL"
@@ -183,7 +175,6 @@ export default function EditTour(props) {
 
           <input type="submit" />
         </form>
-      </Layout>
     </div>
   );
 }
