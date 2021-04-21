@@ -6,7 +6,7 @@ const tourSchema = new Schema(
     name: { type: String, required: true },
     // tour_operator: { type: Schema.Types.ObjectId, ref: "User" },
     tour_operator: { type: String, required: true },
-    date: { type: Date, required: true },
+    date: { type: String, required: true },
     time: { type: String, required: true },
     type: { type: String, required: true },
     description: { type: String, required: true },
