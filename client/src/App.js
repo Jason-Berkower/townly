@@ -8,15 +8,15 @@ import CreateTour from "./screens/CreateTour";
 import Auth from "./screens/Auth";
 import EditTour from "./screens/EditTour";
 import { verifyUser } from "./services/users";
-import Layout from "./components/Layout"
+import Layout from "./components/Layout";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
-  const [tourGuide, setTourGuide] = useState(null)
+  const [tourGuide, setTourGuide] = useState(null);
   const logout = async () => {
     await localStorage.clear();
     setCurrentUser(null);
-    setTourGuide(null)
+    setTourGuide(null);
   };
 
   useEffect(() => {
@@ -26,11 +26,11 @@ function App() {
   const requestVerification = async () => {
     const user = await verifyUser();
     if (user.is_tourGuide) {
-      setTourGuide(user)
+      setTourGuide(user);
     } else {
       setCurrentUser(user);
     }
-    console.log(user)
+    console.log(user);
   };
 
   const renderEdit = () => {
@@ -41,33 +41,31 @@ function App() {
     }
   };
 
- 
-
   console.log("current user");
   console.log(currentUser);
 
   return (
     <div className="App">
       <Switch>
-        <Layout currentUser={currentUser} tourGuide={tourGuide} logout={logout} >
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/tours/:id">
-          <TourDetails />
-        </Route>
-        <Route exact path="/tours">
-          <TourList />
-        </Route>
-        <Route exact path="/create-tour">
-          <CreateTour />
-        </Route>
-        <Route exact path="/edit-tour/:id">
-          {renderEdit()}
-        </Route>
-        <Route exact path="/auth">
-          <Auth setCurrentUser={setCurrentUser} setTourGuide={setTourGuide}/>
-        </Route>
+        <Layout currentUser={currentUser} tourGuide={tourGuide} logout={logout}>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/tours/:id">
+            <TourDetails tourGuide={tourGuide} />
+          </Route>
+          <Route exact path="/tours">
+            <TourList />
+          </Route>
+          <Route exact path="/create-tour">
+            <CreateTour />
+          </Route>
+          <Route exact path="/edit-tour/:id">
+            {renderEdit()}
+          </Route>
+          <Route exact path="/auth">
+            <Auth setCurrentUser={setCurrentUser} setTourGuide={setTourGuide} />
+          </Route>
         </Layout>
       </Switch>
     </div>
