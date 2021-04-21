@@ -54,11 +54,11 @@ export default function GalleryContainer() {
           {/* <Carousel> */}
           {tours.map((tour, index) => {
             if (tour.popularity >= 8) {
-              return <TopTour key={index} tour={tour} />
-              // console.log(tour)
-            }
-          })
-        }
+                return <TopTour key={index} tour={tour} />
+                // console.log(tour)
+              }
+            })
+          }
         {/* </Carousel> */}
         </div>
         <button>Next</button>
