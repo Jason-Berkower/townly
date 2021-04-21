@@ -9,6 +9,15 @@
   align-items: center;
 }
 
+.info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-content: flex-start;
+  align-items: center;
+}
+
 #image {
   width: 40%;
   height: auto;

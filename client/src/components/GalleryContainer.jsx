@@ -37,10 +37,7 @@ export default function GalleryContainer() {
         <div id="tourcontainer">
           <Carousel>
             {filteredTours.map((tour, index) => {
-              
-                
                 return <TopTour key={index} tour={tour} />
-
             })
           }
         </Carousel>
