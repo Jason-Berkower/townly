@@ -3,11 +3,13 @@ import "./CSS/nav.css";
 
 export default function Nav(props) {
   const displayLinks = () => {
-    console.log(props)
+    // console.log(props)
     if (props.currentUser) {
-      <div>
-        <button onClick={props.logout}>sign out</button>
-      </div>
+      return (
+        <div>
+          <button onClick={props.logout}>sign out</button>
+        </div>
+      );
     } else if (props.tourGuide) {
       return (
         <div>

@@ -1,4 +1,4 @@
-import Layout from "../components/Layout"
+
 // import "./CSS/home.css"
 import GalleryContainer from "../components/GalleryContainer"
 import { Link } from "react-router-dom"
@@ -18,7 +18,7 @@ export default function Home(props) {
         <GalleryContainer />
         <div id="buttons">
           <Link to="/tours">Browse All Tours</Link>
-          <Link to="create-tour">Want to Post a Tour?</Link>
+          {/* <Link to="create-tour">Want to Post a Tour?</Link> */}
           {/* redirect to sign up if not signed in */}
           <Link to="/auth">Create an Account</Link>
         </div>
