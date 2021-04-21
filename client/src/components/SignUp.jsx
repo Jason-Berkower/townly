@@ -24,6 +24,13 @@ export default function SignUp(props) {
     }));
   };
 
+  const handleCheck = (event) => {
+    setInput((prevInput) => ({
+      ...prevInput,
+      [event.target.name]: event.target.checked,
+    }));
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     await signUp(input);
@@ -45,7 +52,7 @@ export default function SignUp(props) {
         <input type='password' name='password' value={input.password} placeholder='Enter password...' onChange={handleChange} />
         <label>Confirm Password</label>
         <input type='password' name='passwordConfirmation' value={input.passwordConfirmation} placeholder='Reenter password...' onChange={handleChange} />
-        <input type='checkbox' id='is_tourGuide' name='is_tourGuide' value={input.is_tourGuide} onChange={handleChange} />
+        <input type='checkbox' id='is_tourGuide' name='is_tourGuide' value={input.is_tourGuide} onChange={handleCheck} />
         <label>Tour Guide</label><br />
         <button type='submit'>Sign Up</button>
       </form>

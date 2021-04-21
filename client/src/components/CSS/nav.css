@@ -1,13 +1,21 @@
+
 h1 {
   font-size: 40px;
   margin-left: 10px;
 }
 
+#townly-head{
+  opacity: 100%;
+  color: #FDF5EC;
+}
+
 #nav {
   background-color:#E8821C;
+  font-family: 'Satisfy', cursive;
+  opacity: 68%;
   margin: 0 auto;
   padding: 5px;
-  color: rgb(250, 247, 247);
+  color: #D94F30;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -22,7 +30,12 @@ h1 {
 }
 
 #everyoneslinks {
+
+  font-family: 'Lato', sans-serif;
+  color: #FDF5EC;
+  opacity: 100%;
   width: 300px;
+  font-weight:900;
   margin: 8px;
   display: flex;
   flex-direction: row;
@@ -31,6 +44,8 @@ h1 {
 }
 
 #account {
+  font-family: 'Lato', sans-serif;
+  font-weight: bolder;
   width: 200px;
   margin: 8px;
   display: flex;
