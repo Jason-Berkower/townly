@@ -21,6 +21,11 @@ export default function GalleryContainer() {
   console.log(tours)
 
   
+// carousel
+
+
+
+
 
   return (
     <div>
@@ -28,13 +33,13 @@ export default function GalleryContainer() {
       <div id="gallery">
         <button>Back</button>
         <div id="tourcontainer">
-        {tours.map((tour, index) => {
-          if (tour.popularity >= 8) {
-            return <TopTour key={index} tour={tour} />
-      // console.log(tour)
-            }
-          })
-        }
+          {tours.map((tour, index) => {
+            if (tour.popularity >= 8) {
+              return <TopTour key={index} tour={tour} />
+        // console.log(tour)
+              }
+            })
+          }
         </div>
         <button>Next</button>
       </div>

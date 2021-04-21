@@ -11,8 +11,9 @@ let TopTour = props.tour
   console.log(TopTour)
   
   return (
-    <div>
-      
+    <div id= "unique Tour">
+      <img src={TopTour.imgURL} alt="Top Tour image" />
+      <br/>
        {TopTour.name}
     </div>
   )
