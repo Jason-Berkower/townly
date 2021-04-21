@@ -20,7 +20,7 @@ export default function GalleryContainer() {
     setTours(data);
   };
 
-  console.log(tours)
+  // console.log(tours)
   
   tours.map((tour, index) => {
     if (tour.popularity >= 8) {
@@ -39,13 +39,22 @@ export default function GalleryContainer() {
       <div id="gallery">
         <div id="tourcontainer">
           <Carousel>
-          {tours.map((tour, index) => {
-            if (tour.popularity >= 8) {
+            {tours.map((tour, index) => {
+              // if (tour.popularity < 8) {
+              //   console.log("Im not supposed to be here!!!")
+              // return null
+              // } else
+                if (tour.popularity >= 8) {
+              console.log(`tour ${index}`, tour)
                 return <TopTour key={index} tour={tour} />
-                // console.log(tour)
-            } else {
-              return null
-              }
+                }
+            //     else {
+            //   console.log("what")
+            //   return null
+            // }
+            // else {
+            //   return null
+            //   }
             })
           }
         </Carousel>
