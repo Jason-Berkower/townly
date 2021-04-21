@@ -7,28 +7,31 @@ export default function TourDetails(props) {
   const { id } = useParams();
   const [tourDetails, setTourDetails] = useState({});
 
-  let tourGuide = props.tourGuide
+  let tourGuide = props.tourGuide && props.tourGuide.is_tourGuide
+  console.log(tourGuide);
 
   useEffect(() => {
     getTourDetails();
+    deleteyBoy();
   }, []);
 
   const getTourDetails = async () => {
     const data = await getTourById(id);
     setTourDetails(data);
   };
-  console.log(tourDetails);
+  // console.log(tourDetails);
 
   const deleteyBoy = () => {
-    if (tourGuide) {
-      const handleDelete = (id) => {
-        deleteTour(id);
-        return (
-          <button onClick={handleDelete}>Delete Tour</button>
-        );
-      }
 
+    if (tourGuide) {
+      const handleDelete = (event) => {
+        deleteTour(id);
+      }
+      return (
+        <button onClick={handleDelete}>Delete Tour</button>
+      );
     }
+    return null;
   }
 
   return (
