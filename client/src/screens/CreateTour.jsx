@@ -9,10 +9,14 @@ export default function CreateTour(props) {
 
   let tourGuide = props.tourGuide
 
-  let usernameArray = []
-  tourGuide ? usernameArray.push(tourGuide.username) : usernameArray.push("no tour guide")
+  // let usernameArray = []
+  // tourGuide ? usernameArray.push(tourGuide.username) : usernameArray.push("no tour guide")
+  // console.log(usernameArray)
 
-  console.log(usernameArray)
+  
+  tourGuide ? console.log(tourGuide.username) : console.log("no tour guide")
+
+
   // console.log(tourGuide)
   // tourGuide.map((info) => {
   //   console.log(info)
@@ -21,8 +25,9 @@ export default function CreateTour(props) {
 
   let [tour, setTour] = useState({
     name: "",
+    // tour_operator: "",
     // tour_operator: {props.tourGuide.username},
-    tour_operator: "",
+    tour_operator: "Created Tour Guide",
     date: "",
     time: "8",
     type: "adventure",
