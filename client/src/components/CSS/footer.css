@@ -1,14 +1,9 @@
-img {
-  width: 100px;
-  height: auto;
-}
-
 h5 {
   /* padding: 0; */
   margin-bottom: 0;
 }
 
-a {
+.link {
   font-size: 13px;
   text-decoration: none;
   color: white;

@@ -1,4 +1,5 @@
-
+import "./CSS/toptour.css"
+import { Paper, Button } from '@material-ui/core'
 
 export default function Tour(props) {
 //props passed down of top tours info
@@ -11,10 +12,14 @@ let TopTour = props.tour
   console.log(TopTour)
   
   return (
-    <div id= "unique Tour">
-      <img src={TopTour.imgURL} alt="Top Tour image" />
-      <br/>
-       {TopTour.name}
+    <div id="unique Tour">
+  
+      {/* <Paper> */}
+
+        <img id="image" src={TopTour.imgURL} alt="Top Tour image" />
+        <br/>
+        {TopTour.name}
+      {/* </Paper> */}
     </div>
   )
 }
