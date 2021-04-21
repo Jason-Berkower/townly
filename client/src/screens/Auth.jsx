@@ -8,7 +8,7 @@ export default function Auth(props) {
 
   return (
     <div>
-      <Layout user={props.user}>
+      
 
         <div id='sign-in'>
           <SignIn setCurrentUser={props.setCurrentUser} setTourGuide={props.setTourGuide} />
@@ -17,7 +17,7 @@ export default function Auth(props) {
         <div id='sign-up'>
           <SignUp setCurrentUser={props.setCurrentUser} setTourGuide={props.setTourGuide}/>
         </div>
-      </Layout>
+      
     </div>
   );
 }
