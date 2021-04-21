@@ -1,5 +1,5 @@
 
-// import "./CSS/home.css"
+import "./CSS/home.css"
 import GalleryContainer from "../components/GalleryContainer"
 import { Link } from "react-router-dom"
 
@@ -13,10 +13,9 @@ export default function Home(props) {
 
   return (
     
-    <div>
-      
+    <div id = "home">
         <GalleryContainer />
-        <div id="buttons">
+        <div id="links">
           <Link to="/tours">Browse All Tours</Link>
           {/* <Link to="create-tour">Want to Post a Tour?</Link> */}
           {/* redirect to sign up if not signed in */}
