@@ -14,7 +14,6 @@ export default function Home(props) {
     
     <div>
       <Layout user={props.user}>
-        <h2>Townly</h2>
         <GalleryContainer />
         <div id="buttons">
           Browse All Tours
