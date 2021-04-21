@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState, useEffect } from "react";
-import { Route, Link, Switch, Redirect } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import Home from "./screens/Home.jsx";
 import TourList from "./screens/TourList";
 import TourDetails from "./screens/TourDetails";
@@ -30,7 +30,9 @@ function App() {
     } else {
       setCurrentUser(user);
     }
-    console.log(user);
+
+    // console.log(user)
+
   };
 
   const renderEdit = () => {
@@ -41,6 +43,12 @@ function App() {
     }
   };
 
+
+  //  console.log("tour guide:",tourGuide)
+
+  // console.log("current user");
+  // console.log(currentUser);
+  
   return (
     <div className="App">
       <Switch>
@@ -55,7 +63,7 @@ function App() {
             <TourList />
           </Route>
           <Route exact path="/create-tour">
-            <CreateTour />
+            <CreateTour tourGuide={tourGuide} />
           </Route>
           <Route exact path="/edit-tour/:id">
             {renderEdit()}
@@ -63,6 +71,7 @@ function App() {
           <Route exact path="/auth">
             <Auth setCurrentUser={setCurrentUser} setTourGuide={setTourGuide} />
           </Route>
+
         </Layout>
       </Switch>
     </div>

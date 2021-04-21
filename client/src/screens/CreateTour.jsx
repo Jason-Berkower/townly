@@ -1,14 +1,37 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { createTour} from "../services/tours"
 import { useHistory } from "react-router-dom"
 
 export default function CreateTour(props) {
+  
   const history = useHistory()
+
+
+  let tourGuide = props.tourGuide
+
+  // let usernameArray = []
+  // tourGuide ? usernameArray.push(tourGuide.username) : usernameArray.push("no tour guide")
+  // console.log(usernameArray)
+
+  
+  useEffect(()=>{
+    setTour((prevState) => {
+      return {...prevState, tour_operator: tourGuide ? (tourGuide.username) : "",}
+    })
+  },[tourGuide])
+
+
+  // console.log(tourGuide)
+  // tourGuide.map((info) => {
+  //   console.log(info)
+  // })
+  // console.log(tourGuide.username)
+
   let [tour, setTour] = useState({
     name: "",
-    // tour_operator: `${props.currentUser}`,
-    tour_operator: "Created Tour Guide",
-    //populate with username - params
+    tour_operator: "",
+    // tour_operator: {props.tourGuide.username},
+    // tour_operator: "Created Tour Guide",
     date: "",
     time: "8",
     type: "adventure",
