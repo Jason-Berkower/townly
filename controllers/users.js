@@ -40,6 +40,7 @@ const signIn = async (req, res) => {
         const payload = {
           username: user.username,
           // email: user.email,
+          is_tourGuide: user.is_tourGuide
         };
 
         const token = jwt.sign(payload, TOKEN_KEY);
@@ -104,6 +105,16 @@ const getAllUsers = async (req, res) => {
   }
 };
 
+// const getUserByName = async (req, res) => {
+//   try {
+//     const user = await User.find({ username: req.params.username }).populate("tours")
+//     res.status(200).json(user);
+//   } catch (error) {
+//     return res.status(500).json({ error: error.message });
+//   }
+// };
+
+
 const getOneUser = async (req, res) => {
   try {
     const { id } = req.params;
@@ -124,4 +135,5 @@ module.exports = {
   changePassword,
   getAllUsers,
   getOneUser,
+  
 };

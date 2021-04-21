@@ -24,9 +24,23 @@ export default function SignIn(props) {
   const handleSubmit = async (event) => {
     event.preventDefault();
     let res = await signIn(input);
-    props.setCurrentUser(res.payload);
+    console.log(res)
+    if (res.payload.is_tourGuide === true) {
+      props.setTourGuide(res.payload)
+    } else {
+      props.setCurrentUser(res.payload)
+    }
+    // props.setCurrentUser(res.payload);
     history.push('/');
   };
+
+  // let user = getUserByName(input.username) 
+  // let user = User.find({ username: input.username })
+  //find this user by username found in input.username
+
+  //access the object of this user to find is_tourGuide
+  //this user is tourguide tells us if tour guide or not
+  
 
   return (
     <div>

@@ -6,7 +6,7 @@ const {
   verify,
   changePassword,
   getAllUsers,
-  getOneUser
+  getOneUser,
 } = require("../controllers/users");
 const {
   getAllTours,
