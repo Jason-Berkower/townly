@@ -55,7 +55,7 @@ function App() {
             <Home />
           </Route>
           <Route exact path="/tours/:id">
-            <TourDetails tourGuide={tourGuide} />
+            <TourDetails tourGuide={tourGuide}/>
           </Route>
           <Route exact path="/tours">
             <TourList />

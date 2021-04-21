@@ -4,8 +4,8 @@ import api from "../services/apiConfig";
 import { getTourById, deleteTour } from "../services/tours";
 
 export default function TourDetails(props) {
-  // hi paco
   const { id } = useParams();
+  let tourGuide = props.tourGuide && props.tourGuide.is_tourGuide 
   const [tourDetails, setTourDetails] = useState({});
 
   let tourGuide = props.tourGuide && props.tourGuide.is_tourGuide
@@ -47,7 +47,7 @@ export default function TourDetails(props) {
       <h5>townly guide : {tourDetails.tour_operator}</h5>
       <p>{tourDetails.description}</p>
       <p>
-        date & time : {tourDetails.date},{tourDetails.time}
+        date & time : {tourDetails.date} , {tourDetails.time}
       </p>
       <h5>${tourDetails.price}</h5>
       <h6>popularity : {tourDetails.popularity}</h6>
