@@ -30,7 +30,7 @@ function App() {
     } else {
       setCurrentUser(user);
     }
-    console.log(user);
+    // console.log(user);
   };
 
   const renderEdit = () => {
@@ -41,8 +41,8 @@ function App() {
     }
   };
 
-  console.log("current user");
-  console.log(currentUser);
+  // console.log("current user");
+  // console.log(currentUser);
 
   // console.log("current user");
   // console.log(currentUser);
