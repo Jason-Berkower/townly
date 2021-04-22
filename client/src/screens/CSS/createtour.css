@@ -7,6 +7,20 @@
   align-items: center;
 }
 
-input {
-  margin: 30px;
+.tourinput {
+  margin-bottom: 30px;
+  width: 40%;
+  height: 30px;
+}
+
+select {
+  margin-bottom: 30px;
+}
+
+.width {
+  width: 80%;
+}
+
+#submit {
+  margin-bottom: 30px;
 }
