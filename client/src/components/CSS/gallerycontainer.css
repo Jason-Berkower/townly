@@ -1,12 +1,18 @@
-/* #tourcontainer {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-content: flex-start;
-  align-items: center;
-} */
-
 #headline {
   margin: 50px;
+  font-family: ‘Raleway’, sans-serif;
+  opacity: 0.6;
+}
+
+#tourcontainer {
+  width: 80%;
+}
+
+#gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: center;
 }
