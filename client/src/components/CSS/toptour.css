@@ -1,7 +1,5 @@
 .paper {
-  height: 400px;
-  /* mediaquery to make height smaller so doesnt morph image*/
-
+  height: 30%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -49,10 +47,36 @@
 }
 
 @media only screen and (max-width: 600px) {
-
-  .paper {
+  /* .paper {
     height: 400px;
     /* mediaquery to make height smaller so doesnt morph image*/
+
+  .paper {
+    /* height: 30%; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: center;
   }
 
+  #info {
+    padding-left: 30px;
+  }
+
+  #topdesc {
+    width: 80%;
+    font-size: 13px;
+  }
+
+  #image {
+    width: 100%;
+    height: 100%;
+  }
+
+  #button {
+    margin-top: 10px;
+    margin-bottom: 40px;
+  }
 }
