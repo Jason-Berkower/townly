@@ -27,13 +27,9 @@ export default function GalleryContainer() {
     return tour.popularity >= 8 
     })
   
-
-  
-  
-
   return (
     <div>
-      <h2>Our Top Tours</h2>
+      <h2 id="headline">Our Top Tours</h2>
       <div id="gallery">
         <div id="tourcontainer">
           <Carousel>

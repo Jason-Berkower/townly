@@ -16,17 +16,18 @@ let TopTour = props.tour
   
       <Paper className="paper">
 
-        <img id="image" src={TopTour.imgURL} alt="Top Tour" />
-        <div className = "info">
-          <div id="details">
-
-          {TopTour.name}
-          {TopTour.tour_operator}
-          {/* {TopTour.description} */}
+          <img id="image" src={TopTour.imgURL} alt="Top Tour" />
+          
+          <div id = "info">
+            <div id="details">
+            <h2>{TopTour.name}</h2>
+            <p>{TopTour.tour_operator}</p>
+            <p id="desc">{TopTour.description}</p>
+            </div>
+          
+            <Button>Check it out!</Button>
+          {/* <Link to=`/tours/${TopTour._id}` */}
           </div>
-        <Button>Check it out!</Button>
-        {/* <Link to=`/tours/${TopTour._id}` */}
-        </div>
       </Paper>
     </div>
   )
