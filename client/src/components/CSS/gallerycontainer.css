@@ -4,17 +4,15 @@
   opacity: 0.6;
 }
 
-/* .CarouselItem {
-  /* width: 200px; */
-/* text-align: center;
-} */
-
 #tourcontainer {
-  /* width: 200px; */
   width: 80%;
 }
 
 #gallery {
-  /* text-align: center; */
-  padding-left: 300px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: center;
 }

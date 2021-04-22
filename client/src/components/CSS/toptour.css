@@ -2,7 +2,6 @@
   height: 400px;
   /* mediaquery to make height smaller so doesnt morph image*/
 
-  /* width: 80%; */
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -31,6 +30,7 @@
 
 #topdesc {
   width: 60%;
+  font-size: 13px;
 }
 
 #image {
@@ -39,10 +39,20 @@
 }
 
 #button {
+  margin-top: 10px;
   border: 2px solid #e8821c;
   opacity: 0.7;
 }
 
 #tourtext {
   text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .paper {
+    height: 400px;
+    /* mediaquery to make height smaller so doesnt morph image*/
+  }
+
 }
