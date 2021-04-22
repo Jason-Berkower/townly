@@ -1,0 +1,38 @@
+.sign-up-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+h3 {
+  font-family: ‘Raleway’, sans-serif;
+  margin: 50px;
+  opacity: 0.6;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+  width: 30%;
+  height: 30px;
+  border: none;
+  border-bottom: 2px solid #e8821c;
+  text-align: center;
+  background-color: #fdf5ec;
+  color: #e8821c;
+  justify-content: center;
+}
+
+.submit {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  background-color: #fdf5ec;
+  color: #e8821c;
+  border: 2px solid #e8821c;
+  border-radius: 5px;
+  padding: 10px;
+}

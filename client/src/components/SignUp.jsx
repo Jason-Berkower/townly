@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { signIn, signUp } from '../services/users';
+import './CSS/SignUp.css';
 
 
 export default function SignUp(props) {
@@ -67,8 +68,8 @@ export default function SignUp(props) {
           <input type='checkbox' id='is_tourGuide' name='is_tourGuide' value={input.is_tourGuide} onChange={handleCheck} />
           <label>Tour Guide</label><br />
         </div>
-        <div id='submit'>
-          <button type='submit'>Sign Up</button>
+        <div>
+          <button className='submit' type='submit'>Sign Up</button>
         </div>
       </form>
     </div>
