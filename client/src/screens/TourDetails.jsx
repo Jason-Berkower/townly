@@ -25,23 +25,31 @@ export default function TourDetails(props) {
     if (tourGuide) {
       const handleDelete = (event) => {
         deleteTour(id);
-        history.push('/tours')
+        history.push("/tours");
       };
-      return <button onClick={handleDelete}>Delete Tour</button>;
+      return (
+        <button className="deleteyBoy" onClick={handleDelete}>
+          Delete Tour
+        </button>
+      );
     }
     return null;
   };
 
   return (
-    <div>
-      <h1>{tourDetails.name}</h1>
+    <div className="tourDetails">
+      <h1 id="title">{tourDetails.name}</h1>
       <h3>{tourDetails.type}</h3>
       <h6>
         {tourDetails.city}, {tourDetails.country}
       </h6>
-      <img src={tourDetails.imgURL} alt={`${tourDetails.type} tour`} />
+      <img
+        className="tour-detail-img"
+        src={tourDetails.imgURL}
+        alt={`${tourDetails.type} tour`}
+      />
       <h5>townly guide : {tourDetails.tour_operator}</h5>
-      <p>{tourDetails.description}</p>
+      <p className="description">{tourDetails.description}</p>
       <p>
         date & time : {tourDetails.date} , {tourDetails.time}
       </p>
@@ -50,10 +58,12 @@ export default function TourDetails(props) {
       {/* not sure if we should do popularity in detail, as it would create bias in booking. maybe just use for homepage in the background? */}
 
       {tourGuide && (
-        <button>
-          <Link className="tourGuideLink" to={`/edit-tour/${tourDetails._id}`}>
-            Edit Tour
-          </Link>
+        <button className="deleteyBoy">
+          Edit Tour
+          <Link
+            className="tourGuideLink"
+            to={`/edit-tour/${tourDetails._id}`}
+          ></Link>
         </button>
       )}
       <div>{deleteyBoy()}</div>

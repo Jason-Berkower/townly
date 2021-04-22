@@ -6,7 +6,6 @@ import Carousel from 'react-material-ui-carousel'
 
 
 export default function GalleryContainer() {
-
   const [tours, setTours] = useState([]);
 
   useEffect(() => {

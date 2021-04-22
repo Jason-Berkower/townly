@@ -1,4 +1,3 @@
-
 import "./CSS/home.css"
 import GalleryContainer from "../components/GalleryContainer"
 import { Link } from "react-router-dom"
@@ -7,7 +6,6 @@ import { Link } from "react-router-dom"
 export default function Home(props) {
 
   return (
-
     <div id="home">
       <GalleryContainer />
       <div id="linkslinks">
@@ -15,6 +13,5 @@ export default function Home(props) {
         <Link className="homelinks" to="/auth">Create an Account</Link>
       </div>
     </div>
-
   )
 }

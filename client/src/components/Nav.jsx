@@ -5,15 +5,15 @@ export default function Nav(props) {
   const displayLinks = () => {
     if (props.currentUser) {
       return (
-        <div>
-          <button onClick={props.logout}>sign out</button>
+        <div id = "currentuser">
+          <button className="logout" onClick={props.logout}><Link to="/">sign out</Link></button>
         </div>
       );
     } else if (props.tourGuide) {
       return (
-        <div>
-          <button onClick={props.logout}>sign out</button>
+        <div id = "tourguide">
           <Link to="/create-tour">post tour</Link>
+          <button className="logout" onClick={props.logout}><Link to="/">sign out</Link></button>
         </div>
       );
     } else {
