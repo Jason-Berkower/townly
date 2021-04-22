@@ -20,9 +20,9 @@ export default function ProductList(props) {
       {/* <Layout user={props.user}> */}
 
       <h2>townly tours</h2>
-      {tours.map((tour) => {
+      {tours.map((tour, index) => {
         return (
-          <div>
+          <div key={index}>
             <h3>{tour.name}</h3>
             <h4>{tour.type} tour</h4>
             <h5>
