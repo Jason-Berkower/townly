@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { createTour} from "../services/tours"
 import { useHistory } from "react-router-dom"
+import "./CSS/createtour.css"
 
 export default function CreateTour(props) {
   
@@ -65,6 +66,7 @@ export default function CreateTour(props) {
   
   return (
     <div>
+
         <h2>Post Your Tour</h2>
         <form id="tourform" onSubmit={handleSubmit}>
           <input id="name" placeholder="Tour Name" type="text" value={tour.name} onChange={handleChange} />
