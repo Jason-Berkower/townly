@@ -53,7 +53,7 @@ export default function CreateTour(props) {
   return (
     <div>
 
-      <h2>Post Your Tour</h2>
+      <h2 id="h2">Post Your Tour</h2>
       <form id="tourform" onSubmit={handleSubmit}>
         <input className="tourinput" id="name" placeholder="Tour Name" type="text" value={tour.name} onChange={handleChange} />
 
@@ -61,6 +61,7 @@ export default function CreateTour(props) {
           <label htmlFor="date">Date: </label>
           <input className="tourinput" id="date" type="date" value={tour.date} onChange={handleChange} />
         </div>
+        
         <div>
           <label htmlFor="time">Tour Time: </label>
           <select id="time" form="tourform" value={tour.time} onChange={handleChange}>
@@ -111,8 +112,10 @@ export default function CreateTour(props) {
 
           <textarea className="tourinput" id="description" placeholder="Description" type="text" value={tour.description} onChange={handleChange} />
           
+          <div className="width">
           <label htmlFor="price">$</label>
           <input className="tourinput" id="price" placeholder="Price" type="Number" value={tour.price} onChange={handleChange} />
+          </div>
           
           <input className="tourinput" id="imgURL" placeholder="Image URL" type="text" value={tour.imgURL} onChange={handleChange} />
 
