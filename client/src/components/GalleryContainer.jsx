@@ -6,8 +6,6 @@ import Carousel from 'react-material-ui-carousel'
 
 
 export default function GalleryContainer() {
-  //map through all tours
-  //if tour.popularity >= 8 then <tour pass props>
 
   const [tours, setTours] = useState([]);
 
