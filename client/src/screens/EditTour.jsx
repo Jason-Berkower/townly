@@ -20,8 +20,10 @@ export default function EditTour(props) {
     country: "",
   });
 
+
   useEffect(() => {
     getTourDetails();
+    //eslint-disable-next-line
   }, []);
 
   function handleChange(event) {
