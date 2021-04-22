@@ -7,28 +7,10 @@
   align-items: center;
 }
 
-#sign-up {
-  font-family: ‘Raleway’, sans-serif;
+h3 {
+  font-family: 'Raleway', sans-serif;
   margin: 50px;
   opacity: 0.6;
-}
-
-#sign-up-form {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-content: flex-start;
-  align-items: center;
-}
-
-.sign-up-input {
-  margin: 8px;
-  border: none;
-  border-bottom: 2px solid #e8821c;
-  text-align: center;
-  background-color: #fdf5ec;
-  color: #e8821c;
 }
 
 #checkbox {

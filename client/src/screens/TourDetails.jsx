@@ -39,7 +39,7 @@ export default function TourDetails(props) {
   return (
     <div className="tourDetails">
       <h1 id="title">{tourDetails.name}</h1>
-      <h3>{tourDetails.type}</h3>
+      <h3>{tourDetails.type} tour</h3>
       <h6>
         {tourDetails.city}, {tourDetails.country}
       </h6>
