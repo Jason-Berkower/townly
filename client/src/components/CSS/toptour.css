@@ -31,3 +31,14 @@
   width: 60%;
   height: auto;
 } */
+
+#details {
+  display: flex;
+  flex-direction: column;
+
+}
+
+#image {
+  width: 30%;
+  height: auto;
+}
