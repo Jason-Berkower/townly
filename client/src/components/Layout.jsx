@@ -3,12 +3,14 @@ import Footer from "./Footer"
 
 export default function Layout(props) {
   return (
-    <div>
+   <div id="page-container">
+   <div id="content-wrap">
       <Nav currentUser={props.currentUser} tourGuide={props.tourGuide} logout={props.logout}/>
         <div>
           {props.children}
         </div>
-      <Footer />
+      <Footer id = "footer"/>
     </div>
+  </div>
   )
 }
