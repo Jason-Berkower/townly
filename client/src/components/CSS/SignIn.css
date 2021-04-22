@@ -1,25 +1,25 @@
-.auth-container {
+.flex-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: space-around;
+  justify-content: center;
   align-content: center;
   align-items: center;
 }
 
-#sign-in {
+.flex-item:nth-child(1) {
   order: 0;
   flex: 0 1 auto;
   align-self: auto;
 }
 
-#separator {
+.flex-item:nth-child(2) {
   order: 0;
   flex: 0 1 auto;
   align-self: auto;
 }
 
-#sign-up {
+.flex-item:nth-child(3) {
   order: 0;
   flex: 0 1 auto;
   align-self: auto;
