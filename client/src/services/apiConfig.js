@@ -9,7 +9,7 @@ const getToken = async () => {
 let apiUrl;
 
 const apiUrls = {
-  production: "",
+  production: "https://townly.herokuapp.com/api",
   development: "http://localhost:4567/api",
 };
 
