@@ -3,6 +3,7 @@ form {
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
+  margin-top: 50px;
   width: 30%;
   height: 30px;
   border: none;
@@ -11,6 +12,12 @@ form {
   background-color: #fdf5ec;
   color: #e8821c;
   justify-content: center;
+}
+
+h3 {
+  font-family: ‘Raleway’, sans-serif;
+  margin: 50px;
+  opacity: 0.6;
 }
 
 /* Auth Page */
@@ -22,12 +29,6 @@ form {
   align-content: center;
   align-items: center;
   padding: 50px;
-}
-
-h3 {
-  font-family: ‘Raleway’, sans-serif;
-  margin: 50px;
-  opacity: 0.6;
 }
 
 #sign-in {
@@ -72,6 +73,7 @@ h3 {
 
 #Submit > button {
   margin-bottom: 30px;
+  margin-top: 30px;
   background-color: #fdf5ec;
   color: #e8821c;
   border: 2px solid #e8821c;
@@ -96,6 +98,7 @@ h3 {
 
 #submit > button {
   margin-bottom: 30px;
+  margin-top: 30px;
   background-color: #fdf5ec;
   color: #e8821c;
   border: 2px solid #e8821c;
