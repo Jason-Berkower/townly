@@ -3,3 +3,18 @@
   font-family: ‘Raleway’, sans-serif;
   opacity: 0.6;
 }
+
+/* .CarouselItem {
+  /* width: 200px; */
+/* text-align: center;
+} */
+
+#tourcontainer {
+  /* width: 200px; */
+  width: 80%;
+}
+
+#gallery {
+  /* text-align: center; */
+  padding-left: 300px;
+}
