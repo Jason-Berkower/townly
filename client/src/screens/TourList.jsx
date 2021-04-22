@@ -18,7 +18,7 @@ export default function ProductList(props) {
   return (
     <div className="tourList">
 
-      <h1 className="listHeader">townly tours</h1>
+      <h2 className="listHeader">townly tours</h2>
       {tours.map((tour, index) => {
         return (
           <div key={index}>
