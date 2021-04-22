@@ -126,7 +126,7 @@ export default function CreateTour(props) {
           </select>
           </div>
 
-          <input className="tourinput" id="description" placeholder="Description" type="text" value={tour.description} onChange={handleChange} />
+          <textarea className="tourinput" id="description" placeholder="Description" type="text" value={tour.description} onChange={handleChange} />
           
           <label htmlFor="price">$</label>
           <input className="tourinput" id="price" placeholder="Price" type="Number" value={tour.price} onChange={handleChange} />
