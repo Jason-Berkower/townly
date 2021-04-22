@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { getAllTours } from "../services/tours";
 import { Link } from "react-router-dom";
-import "./CSS/tourlist.css"
+import "./CSS/tourlist.css";
 
 export default function ProductList(props) {
   const [tours, setTours] = useState([]);
@@ -23,11 +23,15 @@ export default function ProductList(props) {
       {tours.map((tour) => {
         return (
           <div>
-            <h5>{tour.name}</h5> 
+            <h3>{tour.name}</h3>
+            <h4>{tour.type} tour</h4>
+            <h5>
+              {tour.city}, {tour.country}
+            </h5>
             <img src={tour.imgURL} alt="" />
-              <div className="tour-edit">
-                <Link to={`/tours/${tour._id}`}>show details</Link>
-              </div>            
+            <div className="tour-edit">
+              <Link to={`/tours/${tour._id}`}>show details</Link>
+            </div>
           </div>
         );
       })}

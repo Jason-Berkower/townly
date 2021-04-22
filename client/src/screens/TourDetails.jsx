@@ -1,14 +1,12 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import api from "../services/apiConfig";
 import { getTourById, deleteTour } from "../services/tours";
+import "./CSS/tourdetails.css";
 
 export default function TourDetails(props) {
   const { id } = useParams();
-  let tourGuide = props.tourGuide && props.tourGuide.is_tourGuide 
   const [tourDetails, setTourDetails] = useState({});
-
-  let tourGuide = props.tourGuide && props.tourGuide.is_tourGuide
+  let tourGuide = props.tourGuide && props.tourGuide.is_tourGuide;
   console.log(tourGuide);
 
   useEffect(() => {
@@ -23,21 +21,17 @@ export default function TourDetails(props) {
   // console.log(tourDetails);
 
   const deleteyBoy = () => {
-
     if (tourGuide) {
       const handleDelete = (event) => {
         deleteTour(id);
-      }
-      return (
-        <button onClick={handleDelete}>Delete Tour</button>
-      );
+      };
+      return <button onClick={handleDelete}>Delete Tour</button>;
     }
     return null;
-  }
+  };
 
   return (
     <div>
-      {/* <Layout user={props.user}> */}
       <h1>{tourDetails.name}</h1>
       <h3>{tourDetails.type}</h3>
       <h6>
@@ -51,11 +45,15 @@ export default function TourDetails(props) {
       </p>
       <h5>${tourDetails.price}</h5>
       <h6>popularity : {tourDetails.popularity}</h6>
-      {/* not sure if we should do popularity in detail, as it would create bias in booking. maybe just use for homepage? */}
+      {/* not sure if we should do popularity in detail, as it would create bias in booking. maybe just use for homepage in the background? */}
 
-      {/* //have to check current user is same as user who created tour */}
-      <Link to={`/edit-tour/${tourDetails._id}`}>Edit Tour</Link>
-      {/* //create edit link */}
+      {tourGuide && (
+        <button>
+          <Link className="tourGuideLink" to={`/edit-tour/${tourDetails._id}`}>
+            Edit Tour
+          </Link>
+        </button>
+      )}
       <div>{deleteyBoy()}</div>
     </div>
   );
