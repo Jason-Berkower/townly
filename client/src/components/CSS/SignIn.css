@@ -13,30 +13,22 @@ h3 {
   opacity: 0.6;
 }
 
-.sign-in-form {
+#sign-in-form {
   display: flex;
   flex-direction: column;
-  margin-bottom: 50px;
-  width: 30%;
-  height: 30px;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: center;
+}
+
+.sign-in-input {
+  margin: 8px;
   border: none;
   border-bottom: 2px solid #e8821c;
   text-align: center;
   background-color: #fdf5ec;
   color: #e8821c;
-  justify-content: center;
-}
-
-#sign-in > #Username {
-  order: 0;
-  flex: 0 1 auto;
-  align-self: auto;
-}
-
-#sign-in > #Password {
-  order: 0;
-  flex: 0 1 auto;
-  align-self: auto;
 }
 
 .Submit {

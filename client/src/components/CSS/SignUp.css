@@ -13,19 +13,11 @@ h3 {
   opacity: 0.6;
 }
 
-/* form {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 50px;
-  width: 30%;
-  height: 30px;
-  border: none;
-  border-bottom: 2px solid #e8821c;
-  text-align: center;
-  background-color: #fdf5ec;
-  color: #e8821c;
-  justify-content: center;
-} */
+#checkbox {
+  padding-top: 10px;
+  font-weight: bold;
+  opacity: 0.6;
+}
 
 .submit {
   margin-bottom: 30px;

@@ -46,24 +46,12 @@ export default function SignUp(props) {
 
   return (
     <div className='sign-up-container'>
-      <h3>Sign Up</h3>
-      <form onSubmit={handleSubmit}>
-        <div id='username'>
-          <label>Username</label>
-          <input name='username' value={input.username} placeholder='Enter username...' onChange={handleChange} />
-        </div>
-        <div id='email'>
-          <label>Email</label>
-          <input type='email' name='email' value={input.email} placeholder='Enter email...' onChange={handleChange} />
-        </div>
-        <div id='password'>
-          <label>Password</label>
-          <input type='password' name='password' value={input.password} placeholder='Enter password...' onChange={handleChange} />
-        </div>
-        <div id='confirm-password'>
-          <label>Confirm Password</label>
-          <input type='password' name='passwordConfirmation' value={input.passwordConfirmation} placeholder='Reenter password...' onChange={handleChange} />
-        </div>
+      <h3 id='sign-up'>Sign Up</h3>
+      <form id="sign-up-form" onSubmit={handleSubmit}>
+        <input className='sign-up-input' name='username' value={input.username} placeholder='Enter username...' onChange={handleChange} />
+        <input className='sign-up-input' type='email' name='email' value={input.email} placeholder='Enter email...' onChange={handleChange} />
+        <input className='sign-up-input' type='password' name='password' value={input.password} placeholder='Enter password...' onChange={handleChange} />
+        <input className='sign-up-input' type='password' name='passwordConfirmation' value={input.passwordConfirmation} placeholder='Reenter password...' onChange={handleChange} />
         <div id='checkbox'>
           <input type='checkbox' id='is_tourGuide' name='is_tourGuide' value={input.is_tourGuide} onChange={handleCheck} />
           <label>Tour Guide</label><br />
