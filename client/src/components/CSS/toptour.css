@@ -47,12 +47,7 @@
 }
 
 @media only screen and (max-width: 600px) {
-  /* .paper {
-    height: 400px;
-    /* mediaquery to make height smaller so doesnt morph image*/
-
   .paper {
-    /* height: 30%; */
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
