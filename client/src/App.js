@@ -34,7 +34,6 @@ function App() {
     } else {
       setCurrentUser(user);
     }
-    // console.log(user);
   };
 
   const renderEdit = () => {
@@ -45,12 +44,6 @@ function App() {
     }
   };
 
-  // console.log("current user");
-  // console.log(currentUser);
-
-  // console.log("current user");
-  // console.log(currentUser);
-  
   return (
     <div className="App">
       <Switch>
@@ -59,7 +52,7 @@ function App() {
             <Home />
           </Route>
           <Route exact path="/tours/:id">
-            <TourDetails tourGuide={tourGuide}/>
+            <TourDetails tourGuide={tourGuide} />
           </Route>
           <Route exact path="/tours">
             <TourList />

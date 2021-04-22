@@ -41,9 +41,6 @@ const main = async () => {
   ];
 
   await User.insertMany(users);
-
-  // Remove before push to production
-  console.log("Users Created!");
 };
 
 const run = async () => {

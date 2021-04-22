@@ -1,38 +1,26 @@
 import { useState, useEffect } from "react"
-import { createTour} from "../services/tours"
+import { createTour } from "../services/tours"
 import { useHistory } from "react-router-dom"
 import "./CSS/createtour.css"
 
 export default function CreateTour(props) {
-  
+
   const history = useHistory()
 
 
   let tourGuide = props.tourGuide
 
-  // let usernameArray = []
-  // tourGuide ? usernameArray.push(tourGuide.username) : usernameArray.push("no tour guide")
-  // console.log(usernameArray)
 
-  
-  useEffect(()=>{
+  useEffect(() => {
     setTour((prevState) => {
-      return {...prevState, tour_operator: tourGuide ? (tourGuide.username) : "",}
+      return { ...prevState, tour_operator: tourGuide ? (tourGuide.username) : "", }
     })
-  },[tourGuide])
+  }, [tourGuide])
 
-
-  // console.log(tourGuide)
-  // tourGuide.map((info) => {
-  //   console.log(info)
-  // })
-  // console.log(tourGuide.username)
 
   let [tour, setTour] = useState({
     name: "",
     tour_operator: "",
-    // tour_operator: {props.tourGuide.username},
-    // tour_operator: "Created Tour Guide",
     date: "",
     time: "8",
     type: "adventure",
@@ -45,7 +33,7 @@ export default function CreateTour(props) {
     country: "",
   })
 
-  
+
   function handleChange(event) {
     let { id, value } = event.target
     setTour((prevState) => ({
@@ -60,24 +48,20 @@ export default function CreateTour(props) {
     await createTour(tour)
     history.push("/tours")
   }
-  
 
-  //imgURL - radio button of 3-5 images per type to select from
-  
+
   return (
     <div>
 
       <h2>Post Your Tour</h2>
       <form id="tourform" onSubmit={handleSubmit}>
         <input className="tourinput" id="name" placeholder="Tour Name" type="text" value={tour.name} onChange={handleChange} />
-        
+
         <div className="width">
           <label htmlFor="date">Date: </label>
           <input className="tourinput" id="date" type="date" value={tour.date} onChange={handleChange} />
         </div>
-
-          {/* <input className="tourinput" id="time" placeholder="Tour Time" type="text" value={tour.time} onChange={handleChange} /> */}
-          <div>
+        <div>
           <label htmlFor="time">Tour Time: </label>
           <select id="time" form="tourform" value={tour.time} onChange={handleChange}>
             <option value="0">12 am</option>
@@ -105,9 +89,8 @@ export default function CreateTour(props) {
             <option value="22">10 pm</option>
             <option value="23">11 pm</option>
           </select>
-          </div>
+        </div>
 
-        {/* <input className="tourinput" id="type" placeholder="Tour Type" type="text" value={tour.type} onChange={handleChange} /> */}
         <div id="label">
           <label htmlFor="type">Tour Type: </label>
           <select id="type" form="tourform" value={tour.type} onChange={handleChange}>
@@ -124,28 +107,24 @@ export default function CreateTour(props) {
             <option value="tasting">Tasting</option>
             <option value="personal">Personalized</option>
           </select>
-          </div>
+        </div>
 
           <textarea className="tourinput" id="description" placeholder="Description" type="text" value={tour.description} onChange={handleChange} />
           
           <label htmlFor="price">$</label>
           <input className="tourinput" id="price" placeholder="Price" type="Number" value={tour.price} onChange={handleChange} />
-          {/* <label htmlFor="price">$ </label>
-          <select id="price" form="tourform" value={tour.price} onChange={handleChange}>
-          <option value="5">5</option>
-          </select> */}
           
           <input className="tourinput" id="imgURL" placeholder="Image URL" type="text" value={tour.imgURL} onChange={handleChange} />
 
-          <input className="tourinput" id="street" placeholder="Street" type="text" value={tour.street} onChange={handleChange} />
+        <input className="tourinput" id="street" placeholder="Street" type="text" value={tour.street} onChange={handleChange} />
 
-          <input className="tourinput" id="city" placeholder="City" type="text" value={tour.city} onChange={handleChange} />
+        <input className="tourinput" id="city" placeholder="City" type="text" value={tour.city} onChange={handleChange} />
 
-          <input className="tourinput" id="country" placeholder="Country" type="text" value={tour.country} onChange={handleChange} />
+        <input className="tourinput" id="country" placeholder="Country" type="text" value={tour.country} onChange={handleChange} />
 
-          <input id="submit" type = "submit"/>
+        <input id="submit" type="submit" />
 
-        </form>
+      </form>
     </div>
   )
 }

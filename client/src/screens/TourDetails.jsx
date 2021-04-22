@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useHistory } from "react-router-dom";
 import { getTourById, deleteTour } from "../services/tours";
 import "./CSS/tourdetails.css";
 
@@ -7,7 +7,7 @@ export default function TourDetails(props) {
   const { id } = useParams();
   const [tourDetails, setTourDetails] = useState({});
   let tourGuide = props.tourGuide && props.tourGuide.is_tourGuide;
-  console.log(tourGuide);
+  const history = useHistory();
 
   useEffect(() => {
     getTourDetails();
@@ -24,6 +24,7 @@ export default function TourDetails(props) {
     if (tourGuide) {
       const handleDelete = (event) => {
         deleteTour(id);
+        history.push('/tours')
       };
       return <button onClick={handleDelete}>Delete Tour</button>;
     }
