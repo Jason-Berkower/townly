@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { signIn } from '../services/users';
+import './CSS/SignIn.css'
 
 
 export default function SignIn(props) {
@@ -37,14 +38,20 @@ export default function SignIn(props) {
   //this user is tourguide tells us if tour guide or not
 
   return (
-    <div>
+    <div className='sign-in-container'>
       <h3>Sign In</h3>
-      <form onSubmit={handleSubmit}>
-        <label>Username</label>
-        <input name='username' value={input.username} placeholder='Enter username...' onChange={handleChange} />
-        <label>Password</label>
-        <input type='password' name='password' value={input.password} placeholder='Enter password' onChange={handleChange} />
-        <button type='submit'>Sign In</button>
+      <form id='sign-in-form' onSubmit={handleSubmit}>
+        <div id='Username'>
+          <label>Username</label>
+          <input name='username' value={input.username} placeholder='Enter username...' onChange={handleChange} />
+        </div>
+        <div id='Password'>
+          <label>Password</label>
+          <input type='password' name='password' value={input.password} placeholder='Enter password' onChange={handleChange} />
+        </div>
+        <div>
+          <button className='submit' type='submit'>Sign In</button>
+        </div>
       </form>
     </div>
   )

@@ -1,0 +1,31 @@
+/* Auth Page */
+.auth-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+/* Sign In */
+#sign-in {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+}
+
+/* Separator */
+#separator {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+}
+
+/* Sign Up */
+#sign-up {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+}

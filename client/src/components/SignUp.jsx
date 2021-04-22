@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { signIn, signUp } from '../services/users';
+import './CSS/SignUp.css';
 
 
 export default function SignUp(props) {
@@ -44,20 +45,32 @@ export default function SignUp(props) {
   };
 
   return (
-    <div>
+    <div className='sign-up-container'>
       <h3>Sign Up</h3>
       <form onSubmit={handleSubmit}>
-        <label>Username</label>
-        <input name='username' value={input.username} placeholder='Enter username...' onChange={handleChange} />
-        <label>Email</label>
-        <input type='email' name='email' value={input.email} placeholder='Enter email...' onChange={handleChange} />
-        <label>Password</label>
-        <input type='password' name='password' value={input.password} placeholder='Enter password...' onChange={handleChange} />
-        <label>Confirm Password</label>
-        <input type='password' name='passwordConfirmation' value={input.passwordConfirmation} placeholder='Reenter password...' onChange={handleChange} />
-        <input type='checkbox' id='is_tourGuide' name='is_tourGuide' value={input.is_tourGuide} onChange={handleCheck} />
-        <label>Tour Guide</label><br />
-        <button type='submit'>Sign Up</button>
+        <div id='username'>
+          <label>Username</label>
+          <input name='username' value={input.username} placeholder='Enter username...' onChange={handleChange} />
+        </div>
+        <div id='email'>
+          <label>Email</label>
+          <input type='email' name='email' value={input.email} placeholder='Enter email...' onChange={handleChange} />
+        </div>
+        <div id='password'>
+          <label>Password</label>
+          <input type='password' name='password' value={input.password} placeholder='Enter password...' onChange={handleChange} />
+        </div>
+        <div id='confirm-password'>
+          <label>Confirm Password</label>
+          <input type='password' name='passwordConfirmation' value={input.passwordConfirmation} placeholder='Reenter password...' onChange={handleChange} />
+        </div>
+        <div id='checkbox'>
+          <input type='checkbox' id='is_tourGuide' name='is_tourGuide' value={input.is_tourGuide} onChange={handleCheck} />
+          <label>Tour Guide</label><br />
+        </div>
+        <div>
+          <button className='submit' type='submit'>Sign Up</button>
+        </div>
       </form>
     </div>
   )
