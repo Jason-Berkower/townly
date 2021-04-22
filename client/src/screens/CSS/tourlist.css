@@ -9,9 +9,24 @@
   color: #589EAD;
 }
 
+.tourTitle{
+  color: #589EAD;
+
+}
+
 .tourListImg{
   border-radius: 6%;
   width: 50%;
   padding-top: 6px;
 }
+
+
+.showDetailsWrap{
+  padding-bottom: 6px;
+
+}
+#showDetails{
+  padding-bottom: 2px;
+}
+
 
