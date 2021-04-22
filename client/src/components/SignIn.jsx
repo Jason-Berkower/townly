@@ -39,16 +39,10 @@ export default function SignIn(props) {
 
   return (
     <div className='sign-in-container'>
-      <h3>Sign In</h3>
+      <h3 id='sign-in'>Sign In</h3>
       <form id='sign-in-form' onSubmit={handleSubmit}>
-        <div id='Username'>
-          <label>Username</label>
-          <input name='username' value={input.username} placeholder='Enter username...' onChange={handleChange} />
-        </div>
-        <div id='Password'>
-          <label>Password</label>
-          <input type='password' name='password' value={input.password} placeholder='Enter password' onChange={handleChange} />
-        </div>
+        <input className='sign-in-input' name='username' value={input.username} placeholder='Enter username...' onChange={handleChange} />
+        <input className='sign-in-input' type='password' name='password' value={input.password} placeholder='Enter password' onChange={handleChange} />
         <div>
           <button className='submit' type='submit'>Sign In</button>
         </div>
