@@ -13,7 +13,7 @@ h3 {
   opacity: 0.6;
 }
 
-form {
+/* form {
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
@@ -25,6 +25,24 @@ form {
   background-color: #fdf5ec;
   color: #e8821c;
   justify-content: center;
+} */
+
+#sign-up-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+#username,
+#email,
+#password,
+#confirm-password,
+#checkbox,
+#submit {
+  padding: 10px;
 }
 
 .submit {
