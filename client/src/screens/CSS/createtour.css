@@ -34,7 +34,7 @@ textarea {
 
 select {
   margin-bottom: 30px;
-  width: 300px;
+  width: 200px;
   background-color: #fdf5ec;
   color: #e8821c;
   border: 0;
@@ -47,6 +47,11 @@ select {
 
 #submit {
   margin-bottom: 30px;
+  background-color: #fdf5ec;
+  color: #e8821c;
+  border: 2px solid #e8821c;
+  border-radius: 5px;
+  padding: 10px;
 }
 
 /* #description{
