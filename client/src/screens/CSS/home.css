@@ -10,3 +10,14 @@
   align-content: flex-start;
   align-items: center;
 } */
+
+.homelinks {
+  margin: 20px;
+}
+
+#linkslinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 80px;
+}

@@ -34,6 +34,8 @@
 
 .paper {
   height: 400px;
+  /* mediaquery to make height smaller so doesnt morph image*/
+
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -44,7 +46,7 @@
 }
 
 #info {
-  padding-left: 30px;
+  padding-left: 80px;
 }
 
 #details {
@@ -58,5 +60,5 @@
 
 #image {
   width: 50%;
-  height: auto;
+  height: 100%;
 }

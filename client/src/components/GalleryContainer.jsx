@@ -27,10 +27,6 @@ export default function GalleryContainer() {
     return tour.popularity >= 8 
     })
   
-
-  
-  
-
   return (
     <div>
       <h2>Our Top Tours</h2>
