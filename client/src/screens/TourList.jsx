@@ -17,7 +17,6 @@ export default function ProductList(props) {
 
   return (
     <div>
-      {/* <Layout user={props.user}> */}
 
       <h2>townly tours</h2>
       {tours.map((tour) => {

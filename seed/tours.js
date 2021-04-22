@@ -5,9 +5,6 @@ const faker = require("faker");
 
 db.on("error", console.error.bind(console, "Mongo Connection Error"));
 
-// const addTours = async () => {
-// await Tour.deleteMany({});
-
 const tours = [
   {
     name: faker.lorem.words(),
@@ -21,12 +18,7 @@ const tours = [
     imgURL: faker.image.nature(),
     street: faker.address.streetAddress(),
     city: "Buenos Aires",
-    country: "Argentina"
-    // location: [
-    //   faker.address.streetAddress(),
-    //   faker.address.cityName(),
-    //   faker.address.zipCode(),
-    // ],
+    country: "Argentina",
   },
   {
     name: faker.lorem.words(),
@@ -41,11 +33,6 @@ const tours = [
     street: faker.address.streetAddress(),
     city: faker.address.cityName(),
     country: faker.address.country(),
-    // location: [
-    //   faker.address.streetAddress(),
-    //   faker.address.cityName(),
-    //   faker.address.zipCode(),
-    // ],
   },
   {
     name: faker.lorem.words(),
@@ -60,11 +47,6 @@ const tours = [
     street: faker.address.streetAddress(),
     city: faker.address.cityName(),
     country: faker.address.country(),
-    // location: [
-    //   faker.address.streetAddress(),
-    //   faker.address.cityName(),
-    //   faker.address.zipCode(),
-    // ],
   },
   {
     name: faker.lorem.words(),
@@ -79,11 +61,6 @@ const tours = [
     street: faker.address.streetAddress(),
     city: faker.address.cityName(),
     country: faker.address.country(),
-    // location: [
-    //   faker.address.streetAddress(),
-    //   faker.address.cityName(),
-    //   faker.address.zipCode(),
-    // ],
   },
   {
     name: faker.lorem.words(),
@@ -98,11 +75,6 @@ const tours = [
     street: faker.address.streetAddress(),
     city: faker.address.cityName(),
     country: faker.address.country(),
-    // location: [
-    //   faker.address.streetAddress(),
-    //   faker.address.cityName(),
-    //   faker.address.zipCode(),
-    // ],
   },
   {
     name: faker.lorem.words(),
@@ -117,16 +89,11 @@ const tours = [
     street: faker.address.streetAddress(),
     city: faker.address.cityName(),
     country: faker.address.country(),
-    // location: [
-    //   faker.address.streetAddress(),
-    //   faker.address.cityName(),
-    //   faker.address.zipCode(),
-    // ],
   },
 ];
 
 const addTours = async () => {
-  await Tour.deleteMany()
+  await Tour.deleteMany();
   await Promise.all(
     tours.map(async (tourToAdd) => {
       let user = await User.findOne({
@@ -134,28 +101,15 @@ const addTours = async () => {
       });
 
       //update object with tour ID
-      tourToAdd.tour_operator = user.username
+      tourToAdd.tour_operator = user.username;
 
       const tour = await Tour.create(tourToAdd);
-      // console.log(tour)
 
       await user.tours.push(tour._id);
       await user.save();
-      // console.log(tour)
     })
   );
-  db.close()
-  // await Tour.insertMany(tours);
-
-  //take out before production
-  // console.log("Tours created");
+  db.close();
 };
 
-
-// async function run() {
-//   await addTours();
-//   db.close();
-// }
-
-// run();
-addTours()
+addTours();
