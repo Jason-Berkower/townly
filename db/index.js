@@ -14,8 +14,7 @@ mongoose
     console.log("MongoDB Server Connection Error:", error.message);
   });
 
-// Take this out before deployment
-mongoose.set("debug", true);
+mongoose.set("debug", false);
 
 const db = mongoose.connection;
 

@@ -8,7 +8,7 @@ import Carousel from 'react-material-ui-carousel'
 export default function GalleryContainer() {
   //map through all tours
   //if tour.popularity >= 8 then <tour pass props>
-  
+
   const [tours, setTours] = useState([]);
 
   useEffect(() => {
@@ -17,16 +17,14 @@ export default function GalleryContainer() {
 
   const handleRequest = async () => {
     const data = await getAllTours();
-    // console.log(data)
     setTours(data);
   };
 
-  // console.log(tours)
-  
+
   let filteredTours = tours.filter((tour, index) => {
-    return tour.popularity >= 8 
-    })
-  
+    return tour.popularity >= 8
+  })
+
   return (
     <div>
       <h2 id="headline">Our Top Tours</h2>
@@ -34,10 +32,10 @@ export default function GalleryContainer() {
         <div id="tourcontainer">
           <Carousel>
             {filteredTours.map((tour, index) => {
-                return <TopTour key={index} tour={tour} />
+              return <TopTour key={index} tour={tour} />
             })
-          }
-        </Carousel>
+            }
+          </Carousel>
         </div>
       </div>
     </div>
