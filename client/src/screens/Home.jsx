@@ -16,10 +16,10 @@ export default function Home(props) {
     <div id = "home">
         <GalleryContainer />
         <div id="links">
-          <Link to="/tours">Browse All Tours</Link>
+          <Link className="homelinks" to="/tours">Browse All Tours</Link>
           {/* <Link to="create-tour">Want to Post a Tour?</Link> */}
           {/* redirect to sign up if not signed in */}
-          <Link to="/auth">Create an Account</Link>
+          <Link className="homelinks" to="/auth">Create an Account</Link>
         </div>
     </div>
     

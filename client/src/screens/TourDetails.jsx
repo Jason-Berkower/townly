@@ -5,7 +5,7 @@ import { getTourById, deleteTour } from "../services/tours";
 
 export default function TourDetails(props) {
   const { id } = useParams();
-  let tourGuide = props.tourGuide && props.tourGuide.is_tourGuide 
+  // let tourGuide = props.tourGuide && props.tourGuide.is_tourGuide 
   const [tourDetails, setTourDetails] = useState({});
 
   let tourGuide = props.tourGuide && props.tourGuide.is_tourGuide

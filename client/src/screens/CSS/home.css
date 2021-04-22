@@ -1,6 +1,12 @@
-/* #home {
+.homelinks {
+  margin: 20px;
 }
 
-.links {
-  margin: 50px;
-} */
+#links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-content: flex-start;
+  align-items: center;
+}
