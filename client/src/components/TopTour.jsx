@@ -18,11 +18,11 @@ let TopTour = props.tour
 
           <img id="image" src={TopTour.imgURL} alt="Top Tour" />
           
-          <div className = "info">
+          <div id = "info">
             <div id="details">
-            <p>{TopTour.name}</p>
+            <h2>{TopTour.name}</h2>
             <p>{TopTour.tour_operator}</p>
-              {/* {TopTour.description} */}
+            <p id="desc">{TopTour.description}</p>
             </div>
           
             <Button>Check it out!</Button>
