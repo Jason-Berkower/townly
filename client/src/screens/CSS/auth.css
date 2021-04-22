@@ -1,3 +1,19 @@
+/* All */
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+  width: 30%;
+  height: 30px;
+  border: none;
+  border-bottom: 2px solid #e8821c;
+  text-align: center;
+  background-color: #fdf5ec;
+  color: #e8821c;
+  justify-content: center;
+}
+
+/* Auth Page */
 .auth-container {
   display: flex;
   flex-direction: row;
@@ -5,6 +21,13 @@
   justify-content: space-around;
   align-content: center;
   align-items: center;
+  padding: 50px;
+}
+
+h3 {
+  font-family: ‘Raleway’, sans-serif;
+  margin: 50px;
+  opacity: 0.6;
 }
 
 #sign-in {
@@ -23,4 +46,59 @@
   order: 0;
   flex: 0 1 auto;
   align-self: auto;
+}
+
+/* Sign In */
+.sign-in-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+#Username {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+}
+
+#Password {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+}
+
+#Submit > button {
+  margin-bottom: 30px;
+  background-color: #fdf5ec;
+  color: #e8821c;
+  border: 2px solid #e8821c;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* Separator */
+#separator {
+  background-color: gray;
+}
+
+/* Sign Up */
+.sign-up-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+#submit > button {
+  margin-bottom: 30px;
+  background-color: #fdf5ec;
+  color: #e8821c;
+  border: 2px solid #e8821c;
+  border-radius: 5px;
+  padding: 10px;
 }

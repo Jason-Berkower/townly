@@ -37,14 +37,20 @@ export default function SignIn(props) {
   //this user is tourguide tells us if tour guide or not
 
   return (
-    <div>
+    <div className='sign-in-container'>
       <h3>Sign In</h3>
       <form onSubmit={handleSubmit}>
-        <label>Username</label>
-        <input name='username' value={input.username} placeholder='Enter username...' onChange={handleChange} />
-        <label>Password</label>
-        <input type='password' name='password' value={input.password} placeholder='Enter password' onChange={handleChange} />
-        <button type='submit'>Sign In</button>
+        <div id='Username'>
+          <label>Username</label>
+          <input name='username' value={input.username} placeholder='Enter username...' onChange={handleChange} />
+        </div>
+        <div id='Password'>
+          <label>Password</label>
+          <input type='password' name='password' value={input.password} placeholder='Enter password' onChange={handleChange} />
+        </div>
+        <div id='Submit'>
+          <button type='submit'>Sign In</button>
+        </div>
       </form>
     </div>
   )

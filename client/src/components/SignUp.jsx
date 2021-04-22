@@ -67,7 +67,9 @@ export default function SignUp(props) {
           <input type='checkbox' id='is_tourGuide' name='is_tourGuide' value={input.is_tourGuide} onChange={handleCheck} />
           <label>Tour Guide</label><br />
         </div>
-        <button type='submit'>Sign Up</button>
+        <div id='submit'>
+          <button type='submit'>Sign Up</button>
+        </div>
       </form>
     </div>
   )
