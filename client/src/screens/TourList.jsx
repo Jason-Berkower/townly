@@ -27,7 +27,7 @@ export default function ProductList(props) {
             <h5>
               {tour.city}, {tour.country}
             </h5>
-            <img src={tour.imgURL} alt="" />
+            <img className="tour-list-img" src={tour.imgURL} alt="" />
             <div className="tour-edit">
               <Link to={`/tours/${tour._id}`}>show details</Link>
             </div>

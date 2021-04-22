@@ -5,14 +5,14 @@ h1 {
 }
 
 #townly-head{
-  opacity: 100%;
+  opacity: 1;
   color: #FDF5EC;
 }
 
 #nav {
   background-color:#E8821C;
   font-family: 'Satisfy', cursive;
-  opacity: 68%;
+  opacity: .68;
   margin: 0 auto;
   padding: 5px;
   color: #D94F30;
@@ -33,7 +33,7 @@ h1 {
 
   font-family: 'Lato', sans-serif;
   color: #FDF5EC;
-  opacity: 100%;
+  opacity: 1;
   width: 300px;
   font-weight:900;
   margin: 8px;

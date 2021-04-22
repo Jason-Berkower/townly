@@ -39,7 +39,7 @@ export default function TourDetails(props) {
       <h6>
         {tourDetails.city}, {tourDetails.country}
       </h6>
-      <img src={tourDetails.imgURL} alt={`${tourDetails.type} tour`} />
+      <img className="tour-detail-img" src={tourDetails.imgURL} alt={`${tourDetails.type} tour`} />
       <h5>townly guide : {tourDetails.tour_operator}</h5>
       <p>{tourDetails.description}</p>
       <p>
