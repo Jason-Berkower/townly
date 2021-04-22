@@ -26,7 +26,6 @@ h1 {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
-  /* text-align:right; */
 }
 #tourguide {
   font-family: "Lato", sans-serif;
@@ -50,8 +49,8 @@ h1 {
   margin: 8px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: flex-end;
+  margin-right: 30px;
 }
 
 #everyoneslinks {
@@ -76,4 +75,14 @@ h1 {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+}
+
+.logout {
+  background-color: #e8821c;
+  opacity: 0.68;
+  font-size: 17px;
+  /* border: 2px solid; */
+  border: 0;
+  border-radius: 30px;
+  padding: 5px;
 }

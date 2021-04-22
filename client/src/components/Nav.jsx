@@ -6,14 +6,14 @@ export default function Nav(props) {
     if (props.currentUser) {
       return (
         <div id = "currentuser">
-          <button onClick={props.logout}><Link to="/">sign out</Link></button>
+          <button className="logout" onClick={props.logout}><Link to="/">sign out</Link></button>
         </div>
       );
     } else if (props.tourGuide) {
       return (
         <div id = "tourguide">
           <Link to="/create-tour">post tour</Link>
-          <button onClick={props.logout}><Link to="/">sign out</Link></button>
+          <button className="logout" onClick={props.logout}><Link to="/">sign out</Link></button>
         </div>
       );
     } else {
