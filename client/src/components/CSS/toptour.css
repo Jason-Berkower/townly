@@ -19,16 +19,17 @@
 }
 
 #toptourname {
-  font-family: ‘Raleway’, sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 #toptourguide {
-  font-family: ‘Lato’, sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 #topdesc {
   width: 60%;
   font-size: 13px;
+  font-family: "Lato", sans-serif;
 }
 
 #image {
