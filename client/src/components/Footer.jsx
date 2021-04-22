@@ -14,11 +14,9 @@ export default function Footer() {
         <div id ="individuals">
 
           <a className = "link" href="https://github.com/amandaphail">Amanda</a>
-          {/* <Link to="https://github.com/amandaphail">Amanda</Link> */}
           <a className = "link" href="https://github.com/Jason-Berkower">Jason</a>
-          {/* <Link to="https://github.com/Jason-Berkower">Jason</Link> */}
           <a className = "link" href ="https://github.com/PecoDory">Paco</a>
-      {/* <Link to="https://github.com/PecoDory">Paco</Link> */}
+     
         </div>
       </div>
     </div>
