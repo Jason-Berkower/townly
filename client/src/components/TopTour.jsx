@@ -12,16 +12,19 @@ export default function Tour(props) {
 
         <img id="image" src={TopTour.imgURL} alt="Top Tour" />
 
+        <div id ="tourtext">
         <div id="info">
           <div id="details">
-            <h2>{TopTour.name}</h2>
-            <p>{TopTour.tour_operator}</p>
-            <p id="desc">{TopTour.description}</p>
+            <h2 id="toptourname">{TopTour.name}</h2>
+            <p id="toptourguide">{TopTour.tour_operator}</p>
+            <p id="topdesc">{TopTour.description}</p>
           </div>
 
-          <Button><Link to={`/tours/${TopTour._id}`}>Check it out!</Link></Button>
+            <Button id="button"><Link to={`/tours/${TopTour._id}`}>Check it out!</Link></Button>
+        </div>
         </div>
       </Paper>
     </div>
   )
+
 }

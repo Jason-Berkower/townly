@@ -1,37 +1,3 @@
-/* .paper {
-  height: 500px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-content: flex-start;
-  align-items: center;
-}
-
-.info {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-content: flex-start;
-  align-items: center;
-}
-
-#details {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-content: flex-start;
-  align-items: center;
-}
-
-#image {
-  width: 60%;
-  height: auto;
-} */
-
 .paper {
   height: 400px;
   /* mediaquery to make height smaller so doesnt morph image*/
@@ -54,11 +20,29 @@
   flex-direction: column;
   text-align: left;
 }
-#desc {
+
+#toptourname {
+  font-family: ‘Raleway’, sans-serif;
+}
+
+#toptourguide {
+  font-family: ‘Lato’, sans-serif;
+}
+
+#topdesc {
   width: 60%;
 }
 
 #image {
   width: 50%;
   height: 100%;
+}
+
+#button {
+  border: 2px solid #e8821c;
+  opacity: 0.7;
+}
+
+#tourtext {
+  text-align: left;
 }
