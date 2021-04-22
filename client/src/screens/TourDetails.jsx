@@ -55,15 +55,15 @@ export default function TourDetails(props) {
       </p>
       <h5>${tourDetails.price}</h5>
       <h6>popularity : {tourDetails.popularity}</h6>
-      {/* not sure if we should do popularity in detail, as it would create bias in booking. maybe just use for homepage in the background? */}
+      
 
       {tourGuide && (
         <button className="deleteyBoy">
-          Edit Tour
+          
           <Link
             className="tourGuideLink"
             to={`/edit-tour/${tourDetails._id}`}
-          ></Link>
+          >Edit Tour</Link>
         </button>
       )}
       <div>{deleteyBoy()}</div>
