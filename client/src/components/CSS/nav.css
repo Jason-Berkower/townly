@@ -40,7 +40,6 @@ h1 {
   align-items: center;
 }
 
-
 #currentuser {
   font-family: "Lato", sans-serif;
   color: #fdf5ec;
@@ -80,10 +79,14 @@ h1 {
 
 .logout {
   background-color: #e8821c;
-  opacity: 0.68;
   font-size: 17px;
-  /* border: 2px solid; */
   border: 0;
   border-radius: 30px;
   padding: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  #nav {
+    flex-direction: column;
+  }
 }
