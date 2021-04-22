@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState, useEffect } from "react";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch, Redirect, useHistory } from "react-router-dom";
 import Home from "./screens/Home.jsx";
 import TourList from "./screens/TourList";
 import TourDetails from "./screens/TourDetails";
@@ -13,10 +13,14 @@ import Layout from "./components/Layout";
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const [tourGuide, setTourGuide] = useState(null);
+
+  let history = useHistory()
+  
   const logout = async () => {
     await localStorage.clear();
     setCurrentUser(null);
     setTourGuide(null);
+    history.push("/")
   };
 
   useEffect(() => {
