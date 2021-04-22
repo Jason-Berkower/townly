@@ -12,6 +12,7 @@ export default function TourDetails(props) {
   useEffect(() => {
     getTourDetails();
     deleteyBoy();
+    //eslint-disable-next-line
   }, []);
 
   const getTourDetails = async () => {
