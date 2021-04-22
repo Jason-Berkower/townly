@@ -1,3 +1,9 @@
+#h2 {
+  font-family: ‘Raleway’, sans-serif;
+  margin: 50px;
+  opacity: 0.6;
+}
+
 #tourform {
   /* width: 60%; */
   display: flex;
@@ -5,16 +11,34 @@
   justify-content: flex-start;
   align-content: flex-start;
   align-items: center;
+  font-family: ‘Lato’, sans-serif;
+  font-size: 13px;
+}
+
+textarea {
+  font-family: ‘Lato’, sans-serif;
+  max-width: 30%;
 }
 
 .tourinput {
   margin-bottom: 30px;
-  width: 40%;
+  width: 30%;
   height: 30px;
+  border: none;
+  border-bottom: 2px solid #e8821c;
+  /* border-radius: 10px; */
+  text-align: center;
+  background-color: #fdf5ec;
+  color: #e8821c;
 }
 
 select {
   margin-bottom: 30px;
+  width: 300px;
+  background-color: #fdf5ec;
+  color: #e8821c;
+  border: 0;
+  /* text-align: center; */
 }
 
 .width {
