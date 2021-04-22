@@ -11,7 +11,7 @@
 
 .tour-detail-img{
   border-radius: 6%;
-  width: 80%;
+  width: 50%;
 }
 
 .tourGuideLink {
@@ -26,6 +26,7 @@
 
 .description{
   font-style: oblique;
+  width:fit-content;
 }
 
 
