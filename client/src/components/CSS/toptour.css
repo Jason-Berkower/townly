@@ -1,4 +1,4 @@
-.paper {
+/* .paper {
   height: 500px;
   width: 100%;
   display: flex;
@@ -10,12 +10,12 @@
 }
 
 .info {
-  /* display: flex;
+  display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-around;
   align-content: flex-start;
-  align-items: center; */
+  align-items: center;
 }
 
 #details {
@@ -30,5 +30,4 @@
 #image {
   width: 60%;
   height: auto;
-  /* object-fit: cover; */
-}
+} */
