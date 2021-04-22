@@ -33,11 +33,13 @@ const signUp = async (req, res) => {
 const signIn = async (req, res) => {
   try {
     const { username, password } = req.body;
+
+    const user = await User.findOne({ username: username });
     if (user) {
       if (await bcrypt.compare(password, user.password_digest)) {
         const payload = {
           username: user.username,
-          email: user.email,
+          is_tourGuide: user.is_tourGuide,
         };
 
         const token = jwt.sign(payload, TOKEN_KEY);
@@ -115,4 +117,11 @@ const getOneUser = async (req, res) => {
   }
 };
 
-module.exports = { signUp, signIn, verify, changePassword, getAllUsers, getOneUser };
+module.exports = {
+  signUp,
+  signIn,
+  verify,
+  changePassword,
+  getAllUsers,
+  getOneUser,
+};

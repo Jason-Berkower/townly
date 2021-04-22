@@ -1,0 +1,9 @@
+.tourGuideLink{
+    color: black;
+    opacity: 1;
+    transition: none;
+}
+
+.tourGuideLink:hover{
+  color: black;
+}

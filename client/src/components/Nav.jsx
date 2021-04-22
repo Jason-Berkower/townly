@@ -1,40 +1,42 @@
-import { Link } from "react-router-dom"
-import "./CSS/nav.css"
+import { Link } from "react-router-dom";
+import "./CSS/nav.css";
 
 export default function Nav(props) {
   const displayLinks = () => {
     if (props.currentUser) {
       return (
         <div>
-            <button onClick={props.logout}>Sign Out</button>
+          <button onClick={props.logout}>sign out</button>
+        </div>
+      );
+    } else if (props.tourGuide) {
+      return (
+        <div>
+          <button onClick={props.logout}>sign out</button>
+          <Link to="/create-tour">post tour</Link>
         </div>
       );
     } else {
       return (
         <div id="account">
-            <Link to="/sign-in">Sign In</Link>
-            <Link to="/sign-up">Sign Up</Link>
+          <Link to="/auth">sign in / sign up</Link>
         </div>
-          
       );
     }
   };
   return (
     <div id="nav">
-      <h1>Townly</h1>
+      <div id="townly-head">
+        <h1>townly...</h1>
+        {/* //slogan go see? */}
+      </div>
       <div id="links">
         <div id="everyoneslinks">
-          <Link to="/">Home</Link>
-          <Link to="/tours">All Tours</Link>
-          <Link to="/create-tour">
-            Post Tour
-          </Link>
+          <Link to="/">home</Link>
+          <Link to="/tours">all tours</Link>
         </div>
-        <div>
-          {displayLinks()}
-        </div>
+        <div>{displayLinks()}</div>
+      </div>
     </div>
-      
-    </div>
-  )
+  );
 }

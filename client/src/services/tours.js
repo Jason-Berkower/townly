@@ -20,8 +20,8 @@ export const createTour = async (tour) => {
   return res.data;
 };
 
-export const updateTour = async (id) => {
-  let res = await api.put(`/tours/${id}`);
+export const updateTour = async (tour) => {
+  let res = await api.put(`/tours/${tour._id}`, tour);
   return res.data;
 };
 

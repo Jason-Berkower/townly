@@ -1,19 +1,18 @@
-import { Link } from 'react-router-dom';
-import SignIn from './SignIn';
-import SignUp from './SignUp';
+import SignIn from '../components/SignIn';
+import SignUp from '../components/SignUp';
 
 
-export default function Auth() {
+export default function Auth(props) {
 
   return (
     <div>
       <div id='sign-in'>
-        <SignIn />
+        <SignIn setCurrentUser={props.setCurrentUser} setTourGuide={props.setTourGuide} />
       </div>
       <div id='separator' />
       <div id='sign-up'>
-        <SignUp />
+        <SignUp setCurrentUser={props.setCurrentUser} setTourGuide={props.setTourGuide} />
       </div>
     </div>
-  )
+  );
 }

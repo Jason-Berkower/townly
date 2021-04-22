@@ -1,0 +1,23 @@
+/* .homelinks {
+  margin: 20px;
+}
+
+#links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-content: flex-start;
+  align-items: center;
+} */
+
+.homelinks {
+  margin: 20px;
+}
+
+#linkslinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 80px;
+}

@@ -4,9 +4,8 @@ const Schema = mongoose.Schema;
 const tourSchema = new Schema(
   {
     name: { type: String, required: true },
-    // tour_operator: { type: Schema.Types.ObjectId, ref: "User" },
     tour_operator: { type: String, required: true },
-    date: { type: Date, required: true },
+    date: { type: String, required: true },
     time: { type: String, required: true },
     type: { type: String, required: true },
     description: { type: String, required: true },
@@ -15,15 +14,7 @@ const tourSchema = new Schema(
     imgURL: { type: String, required: true },
     street: { type: String, required: true },
     city: { type: String, required: true },
-    country: {type: String, required: true},
-    
-
-    // location: {type: String, required: true},
-    // location: [
-    //   { type: String, required: true },
-    //   { type: String, required: true },
-    //   {type: String, required: true},
-    // ]
+    country: { type: String, required: true },
   },
   {
     timestamps: true,

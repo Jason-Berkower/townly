@@ -1,0 +1,64 @@
+/* .paper {
+  height: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-content: flex-start;
+  align-items: center;
+}
+
+#details {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-content: flex-start;
+  align-items: center;
+}
+
+#image {
+  width: 60%;
+  height: auto;
+} */
+
+.paper {
+  height: 400px;
+  /* mediaquery to make height smaller so doesnt morph image*/
+
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: center;
+}
+
+#info {
+  padding-left: 80px;
+}
+
+#details {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+#desc {
+  width: 60%;
+}
+
+#image {
+  width: 50%;
+  height: 100%;
+}

@@ -5,9 +5,6 @@ const faker = require("faker");
 
 db.on("error", console.error.bind(console, "Mongo Connection Error"));
 
-// const addTours = async () => {
-// await Tour.deleteMany({});
-
 const tours = [
   {
     name: faker.lorem.words(),
@@ -21,12 +18,7 @@ const tours = [
     imgURL: faker.image.nature(),
     street: faker.address.streetAddress(),
     city: "Buenos Aires",
-    country: "Argentina"
-    // location: [
-    //   faker.address.streetAddress(),
-    //   faker.address.cityName(),
-    //   faker.address.zipCode(),
-    // ],
+    country: "Argentina",
   },
   {
     name: faker.lorem.words(),
@@ -41,11 +33,34 @@ const tours = [
     street: faker.address.streetAddress(),
     city: faker.address.cityName(),
     country: faker.address.country(),
-    // location: [
-    //   faker.address.streetAddress(),
-    //   faker.address.cityName(),
-    //   faker.address.zipCode(),
-    // ],
+  },
+  {
+    name: faker.lorem.words(),
+    tour_operator: "Manditea",
+    date: "2021-09-30",
+    time: "1 pm",
+    type: "animals",
+    description: faker.lorem.paragraph(),
+    price: 30,
+    popularity: 9,
+    imgURL: faker.image.food(),
+    street: faker.address.streetAddress(),
+    city: faker.address.cityName(),
+    country: faker.address.country(),
+  },
+  {
+    name: faker.lorem.words(),
+    tour_operator: "Jason_the_Viking",
+    date: "2021-7-11",
+    time: "9 am",
+    type: "personalized",
+    description: faker.lorem.paragraph(),
+    price: 70,
+    popularity: 10,
+    imgURL: faker.image.abstract(),
+    street: faker.address.streetAddress(),
+    city: faker.address.cityName(),
+    country: faker.address.country(),
   },
   {
     name: faker.lorem.words(),
@@ -60,11 +75,6 @@ const tours = [
     street: faker.address.streetAddress(),
     city: faker.address.cityName(),
     country: faker.address.country(),
-    // location: [
-    //   faker.address.streetAddress(),
-    //   faker.address.cityName(),
-    //   faker.address.zipCode(),
-    // ],
   },
   {
     name: faker.lorem.words(),
@@ -74,21 +84,16 @@ const tours = [
     type: "historical",
     description: faker.lorem.paragraph(),
     price: 30,
-    popularity: 6,
+    popularity: 9,
     imgURL: faker.image.city(),
     street: faker.address.streetAddress(),
     city: faker.address.cityName(),
     country: faker.address.country(),
-    // location: [
-    //   faker.address.streetAddress(),
-    //   faker.address.cityName(),
-    //   faker.address.zipCode(),
-    // ],
   },
 ];
 
 const addTours = async () => {
-  await Tour.deleteMany()
+  await Tour.deleteMany();
   await Promise.all(
     tours.map(async (tourToAdd) => {
       let user = await User.findOne({
@@ -96,28 +101,15 @@ const addTours = async () => {
       });
 
       //update object with tour ID
-      tourToAdd.tour_operator = user.username
+      tourToAdd.tour_operator = user.username;
 
       const tour = await Tour.create(tourToAdd);
-      // console.log(tour)
 
       await user.tours.push(tour._id);
       await user.save();
-      // console.log(tour)
     })
   );
-  db.close()
-  // await Tour.insertMany(tours);
-
-  //take out before production
-  // console.log("Tours created");
+  db.close();
 };
 
-
-// async function run() {
-//   await addTours();
-//   db.close();
-// }
-
-// run();
-addTours()
+addTours();
