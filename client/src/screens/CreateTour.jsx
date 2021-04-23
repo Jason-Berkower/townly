@@ -132,5 +132,3 @@ export default function CreateTour(props) {
   )
 }
 
-//understanding using select tag in react
-//https://reactjs.org/docs/forms.html

@@ -1,26 +1,15 @@
-import { useState, useEffect } from "react"
-import { createTour } from "../services/tours"
-import { useHistory } from "react-router-dom"
-import "./CSS/edittour.css"
-
-export default function CreateTour(props) {
-
-  const history = useHistory()
+import { useState, useEffect } from "react";
+import { updateTour, getTourById } from "../services/tours";
+import { useHistory, useParams } from "react-router-dom";
+import "./CSS/createtour.css"
 
 
-  let tourGuide = props.tourGuide
-
-
-  useEffect(() => {
-    setTour((prevState) => {
-      return { ...prevState, tour_operator: tourGuide ? (tourGuide.username) : "", }
-    })
-  }, [tourGuide])
-
-
+export default function EditTour(props) {
+  const { id } = useParams();
+  const history = useHistory();
   let [tour, setTour] = useState({
     name: "",
-    tour_operator: "",
+    tour_operator: "Created Tour Guide",
     date: "",
     time: "8",
     type: "adventure",
@@ -31,31 +20,37 @@ export default function CreateTour(props) {
     street: "",
     city: "",
     country: "",
-  })
+  });
 
+  useEffect(() => {
+    getTourDetails();
+  }, []);
 
   function handleChange(event) {
-    let { id, value } = event.target
+    let { id, value } = event.target;
     setTour((prevState) => ({
-      ...prevState, [id]: value
-    }))
+      ...prevState,
+      [id]: value,
+    }));
   }
-
 
   async function handleSubmit(event) {
-    console.log(tour)
-    event.preventDefault()
-    await createTour(tour)
-    history.push("/tours")
+    event.preventDefault();
+    await updateTour(tour);
+    history.push("/tours");
   }
 
+  const getTourDetails = async () => {
+    const data = await getTourById(id);
+    setTour(data);
+  };
 
   return (
     <div>
 
       <h2 id="h2">Edit Your Tour</h2>
-      <form id="editForm" onSubmit={handleSubmit}>
-        <input className="editInput" id="name" placeholder="Tour Name" type="text" value={tour.name} onChange={handleChange} />
+      <form id="tourform" onSubmit={handleSubmit}>
+        <input className="tourinput" id="name" placeholder="Tour Name" type="text" value={tour.name} onChange={handleChange} />
 
         <div className="width">
           <label htmlFor="date">Date: </label>
@@ -131,3 +126,4 @@ export default function CreateTour(props) {
     </div>
   )
 }
+
