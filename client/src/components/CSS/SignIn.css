@@ -8,8 +8,9 @@
 }
 
 h3 {
-  font-family: 'Raleway', sans-serif;
   color: #589EAD;
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
   margin: 50px;
   opacity: 0.6;
 }
@@ -24,8 +25,10 @@ h3 {
 }
 
 .sign-in-input {
-  margin: 8px;
+  margin: 15px;
   border: none;
+  width: 250px;
+  font-size: 15px;
   border-bottom: 2px solid #e8821c;
   text-align: center;
   background-color: #fdf5ec;
@@ -40,4 +43,13 @@ h3 {
   border: 2px solid #e8821c;
   border-radius: 5px;
   padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  h3 {
+    font-size: 20px;
+  }
+  .sign-up-input {
+    font-size: 12px;
+  }
 }

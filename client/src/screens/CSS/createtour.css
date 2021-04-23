@@ -6,7 +6,6 @@
 }
 
 #tourform {
-  /* width: 60%; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -27,7 +26,6 @@ textarea {
   height: 30px;
   border: none;
   border-bottom: 2px solid #e8821c;
-  /* border-radius: 10px; */
   text-align: center;
   background-color: #fdf5ec;
   color: #e8821c;
@@ -39,7 +37,6 @@ select {
   background-color: #fdf5ec;
   color: #e8821c;
   border: 0;
-  /* text-align: center; */
 }
 
 .width {
@@ -54,3 +51,4 @@ select {
   border-radius: 5px;
   padding: 10px;
 }
+
