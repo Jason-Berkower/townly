@@ -29,7 +29,7 @@ export default function TourDetails(props) {
       };
       return (
         <button className="deleteyBoy" onClick={handleDelete}>
-          Delete Tour
+          Delete
         </button>
       );
     }
@@ -39,7 +39,7 @@ export default function TourDetails(props) {
   return (
     <div className="tourDetails">
       <h1 id="title">{tourDetails.name}</h1>
-      <h3>{tourDetails.type}</h3>
+      <h3>{tourDetails.type} tour</h3>
       <h6>
         {tourDetails.city}, {tourDetails.country}
       </h6>
@@ -50,20 +50,21 @@ export default function TourDetails(props) {
       />
       <h5>townly guide : {tourDetails.tour_operator}</h5>
       <p className="description">{tourDetails.description}</p>
-      <p>
+      <br></br>
+      <p className="dateAndTime">
         date & time : {tourDetails.date} , {tourDetails.time}
       </p>
-      <h5>${tourDetails.price}</h5>
-      <h6>popularity : {tourDetails.popularity}</h6>
-      {/* not sure if we should do popularity in detail, as it would create bias in booking. maybe just use for homepage in the background? */}
+      <h5 className="tourPrice">${tourDetails.price}</h5>
+    
+      
 
       {tourGuide && (
         <button className="deleteyBoy">
-          Edit Tour
+          
           <Link
             className="tourGuideLink"
             to={`/edit-tour/${tourDetails._id}`}
-          ></Link>
+          >Edit</Link>
         </button>
       )}
       <div>{deleteyBoy()}</div>

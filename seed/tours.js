@@ -70,7 +70,7 @@ const tours = [
     type: "ghost",
     description: faker.lorem.paragraph(),
     price: 15,
-    popularity: 4,
+    popularity: 8,
     imgURL: faker.image.abstract(),
     street: faker.address.streetAddress(),
     city: faker.address.cityName(),
