@@ -29,7 +29,6 @@ api.interceptors.request.use(
     return options;
   },
   (error) => {
-    console.log("REquest Error:", error);
     return Promise.reject(error);
   }
 );
