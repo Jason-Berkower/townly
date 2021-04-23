@@ -34,9 +34,6 @@ export default function SignIn(props) {
     history.push('/');
   };
 
-  //access the object of this user to find is_tourGuide
-  //this user is tourguide tells us if tour guide or not
-
   return (
     <div className='sign-in-container'>
       <h3 id='sign-in'>Sign In</h3>

@@ -19,7 +19,6 @@ export default function TourDetails(props) {
     const data = await getTourById(id);
     setTourDetails(data);
   };
-  // console.log(tourDetails);
 
   const deleteyBoy = () => {
     if (tourGuide) {
@@ -55,12 +54,12 @@ export default function TourDetails(props) {
         date & time : {tourDetails.date} , {tourDetails.time}
       </p>
       <h5 className="tourPrice">${tourDetails.price}</h5>
-    
-      
+
+
 
       {tourGuide && (
         <button className="deleteyBoy">
-          
+
           <Link
             className="tourGuideLink"
             to={`/edit-tour/${tourDetails._id}`}
