@@ -29,7 +29,7 @@ export default function TourDetails(props) {
       };
       return (
         <button className="deleteyBoy" onClick={handleDelete}>
-          Delete Tour
+          Delete
         </button>
       );
     }
@@ -50,11 +50,12 @@ export default function TourDetails(props) {
       />
       <h5>townly guide : {tourDetails.tour_operator}</h5>
       <p className="description">{tourDetails.description}</p>
-      <p>
+      <br></br>
+      <p className="dateAndTime">
         date & time : {tourDetails.date} , {tourDetails.time}
       </p>
-      <h5>${tourDetails.price}</h5>
-      <h6>popularity : {tourDetails.popularity}</h6>
+      <h5 className="tourPrice">${tourDetails.price}</h5>
+    
       
 
       {tourGuide && (
@@ -63,7 +64,7 @@ export default function TourDetails(props) {
           <Link
             className="tourGuideLink"
             to={`/edit-tour/${tourDetails._id}`}
-          >Edit Tour</Link>
+          >Edit</Link>
         </button>
       )}
       <div>{deleteyBoy()}</div>
